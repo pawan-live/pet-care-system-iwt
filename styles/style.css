@@ -8,6 +8,7 @@
 }
 
 * {
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
 
@@ -21,6 +22,20 @@
 
 .flex.row {
   flex-direction: row;
+}
+
+.width25percent {
+  width: 25%;
+}
+.width50percent {
+  width: 50%;
+}
+.width75percent {
+  width: 75%;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .h1-large {
@@ -51,7 +66,7 @@
   padding: 12px 34px;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 9px;
   background: var(--lightblue);
 }
 .hero-btn:hover {
@@ -67,11 +82,30 @@
   padding: 12px 34px;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 9px;
   background: var(--lightyellow);
 }
 .main-btn:hover {
   border: 1px solid var(--black);
   background: var(--darkyellow);
   transition: 0.5s ease-in-out;
+}
+
+.snippet {
+  background-color: rgb(217, 255, 186);
+  border-radius: 5px;
+  padding: 1px 5px;
+  border: 1px solid rgb(134, 202, 112);
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px 30px;
 }
