@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .h1-large {
   color: var(--black);
   font-weight: 700;
@@ -96,7 +100,7 @@
   border-radius: 8px 0 0 8px;
   /* padding: 2px 5px; */
   padding: 2px 5px 3px 6px;
-  background-color: rgb(162, 237, 199);
+  background-color: rgb(193, 222, 255);
 }
 
 .class-snippet-copy {
