@@ -91,11 +91,27 @@
   transition: 0.5s ease-in-out;
 }
 
-.snippet {
-  background-color: rgb(217, 255, 186);
-  border-radius: 5px;
-  padding: 1px 5px;
-  border: 1px solid rgb(134, 202, 112);
+.class-snippet {
+  border: 1px solid black;
+  border-radius: 8px 0 0 8px;
+  /* padding: 2px 5px; */
+  padding: 2px 5px 3px 6px;
+  background-color: rgb(162, 237, 199);
+}
+
+.class-snippet-copy {
+  border: 1px solid black;
+  border-radius: 0 8px 8px 0;
+  /* padding: 2px 5px; */
+  padding: 4px 6px 4px 6px;
+  border-left: none;
+  cursor: pointer;
+}
+
+.class-snippet-copy:hover {
+  background-color: #00aac1;
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 table {
