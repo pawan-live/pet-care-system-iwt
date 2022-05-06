@@ -7,11 +7,18 @@
   --black: #2e2e2e;
 }
 
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   font-weight: bold;
+}
+
+.form-label{
+    padding: 0px 0px ;
+    margin: 0px 0px;
 }
 
 .box {
@@ -31,10 +38,10 @@ body {
 
 .h1-large {
   color: var(--black);
-
   text-align: center;
   font-weight: 700;
   font-size: 3.2em;
+  padding: 20px;
 }
 
 .h3-large {
@@ -73,6 +80,7 @@ body {
   height: 30px;
   color: var(--black);
   font-size: 14px;
+  padding: 0px 0px;
 }
 
 .box input[type="text"] {
@@ -83,6 +91,7 @@ body {
   height: 30px;
   color: var(--black);
   font-size: 14px;
+  padding: 0px 0px;
 }
 
 #tel-no-container {

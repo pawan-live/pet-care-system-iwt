@@ -10,10 +10,10 @@
   </head>
   <body>
     <div class="box">
-      <h1 class="h1-large">Registration</h1>
-      <h3 class="h3-large">Owner Info</h3>
+      <h1 class="h1-large">Registration</h1><br>
+      <h3 class="h3-large">Owner Info</h3><br>
       <form>
-        <p>Enter your details</p>
+        <p>Enter your details</p><br>
 
         <div class="user-details">
           <div class="input-box">
@@ -37,32 +37,40 @@
             />
           </div>
         </div>
+        <Br>
         <!-- <p>E-mail</p> -->
+        <label class="form-label" for="field-email">E-mail</label><br>
         <input
           id="field-email"
           type="text"
           placeholder="Enter e-mail.."
           required
         />
+        <br><br>
         <!-- <p>Enter Password</p> -->
+        <label class="form-label" for="field-enter-password">Enter Password</label><br>
         <input
-          id="field-password-1"
+          id="field-enter-password"
           type="password"
           placeholder="Enter password.."
           required
-        />
+        /><br>
         <ul>
           <li>Must be at least 6 characters</li>
           <li>Contains letters,numbers & symbols</li>
         </ul>
+      </br>
         <!-- <p>Confirm Password</p> -->
+        <label class="form-label" for="field-confirm-password">Confirm Password</label><br>
         <input
-          id="field-password-2"
+          id="field-confirm-password"
           type="password"
           placeholder="Re-enter password.."
           required
         />
+        <br><br>
         <!-- <p>Contact Number</p> -->
+        <label class="form-label" for="tel-no">Contact Number</label><br>
         <div id="tel-no-container">
           <input
             id="country-code"
@@ -71,9 +79,10 @@
             value="+94"
             required
           />
+          <br>
           <input id="tel-no" type="text" placeholder="" required />
         </div>
-        <button class="main-btn">Continue to Add a pet >></button>
+        <button class="main-btn">Continue to Add a pet >></button><br>
       </form>
     </div>
   </body>
