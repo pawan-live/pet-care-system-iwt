@@ -9,6 +9,8 @@
 
 * {
   font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .flex {
@@ -36,9 +38,9 @@
 }
 
 .h3-large {
-  color: var(--lightyellow);
+  color: var(--darkblue);
   font-weight: 700;
-  font-size: 2.4em;
+  font-size: 2em;
 }
 
 /* colors */
