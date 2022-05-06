@@ -1,0 +1,91 @@
+.contact-us-info{
+    margin: auto;
+   flex-basis: 48%;
+   align-items: center;
+   
+}
+.contact-us-info h5{
+    font-size:15px;
+    margin-bottom: 1px;
+    color: #555;
+    font-weight: 400;
+}
+
+  .contact-colum{
+  
+    flex-basis: 52%;
+    margin-bottom: 23px;
+    margin-left: 140px;
+  }
+  .contact-colum div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-left: 50px;
+  }
+  .contact-colum div .fa{
+    font-size: 17px;
+    color: green;
+    margin-right: 12px;
+    
+  
+  }
+ 
+  .contact-colum  h3 {
+    font-size:16px;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 400;
+    margin-left: 50px;
+  
+  }
+  .messages{
+    margin-right: 120px;
+  }
+ 
+    .messages h3{
+    font-size:16px;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 400;
+    
+  
+  }
+  .location iframe{
+     margin-left: 170px;
+       width: 70%;
+      height: 200px;
+  }
+  .messages input, .messages textarea{
+    width: 80%;
+    padding: 1px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+     }
+     
+    .row{
+      margin-top: 5%;
+      justify-content: space-between;
+      display: flex;
+      
+    }
+    .sub-header{
+      display: flex;
+      background-color: rgb(206, 198, 198);
+      border: none;
+      height: 250px;
+    
+    }
+    .sub-header h2{
+      
+      margin-left: 43%;
+    }
+    .icons{
+      margin-top: 10px;
+     
+    }
+    .sub-header1{
+      text-align: center;
+    }

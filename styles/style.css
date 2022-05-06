@@ -75,3 +75,62 @@
     background: var(--darkyellow);
     transition: 0.5s;
   }
+
+  nav img{
+    width: 75px;
+  }
+  nav{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  .navlinks{
+    flex: 1;
+    text-align: right;
+    
+  }
+  .navlinks ul li {
+    
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    
+
+
+  }
+  .navlinks ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+  .navlinks ul li label{
+    color: black;
+    font-size: 13px;
+  }
+  .navlinks ul li :hover{
+      background-color:rgb(172, 168, 168);
+      transition: 1s;
+      
+  }
+  .header-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  
+  .login p{
+    padding-right: 10px;
+    display: flex;
+    
+    
+  }
+ .header{
+   background-color:rgb(212, 209, 209);
+ }
