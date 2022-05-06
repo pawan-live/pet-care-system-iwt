@@ -5,18 +5,17 @@
     --lightblue: #65c7d0;
     --darkblue: #00aac1;
     --black: #2e2e2e;
-  }
+ }
 
-body{
+  body{
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
-}
+ }
 
 .loginbox{
     width: 500px;
-    height: 520px;
+    height: 350px;
     background: lightgray;
     opacity: 1;
     color: var(--black);
@@ -27,42 +26,17 @@ body{
     box-sizing: border-box;
     padding: 0px 30px;
     border-radius: 15px;
-}
+ }
 
-.h1-large {
+.h2-large {
     color: var(--black);
-    padding: 0 0 20px;
-    text-align: center;
     font-weight: 700;
-    font-size: 3.2em;
-  }
-
-.hero-btn{
-    width: 84%;
-    display: inline-block;
-    text-decoration: none;
+    font-size: 2.4em;
     text-align: center;
-    font-weight: bold;
-    color: var(--black);
-    border: 1px solid var(--black);
-    padding: 12px 34px;
-    font-size: 18px;
-    height: 20px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    border-radius: 14px;
-    background: var(--lightblue);
-  }
+ }
 
-  .hero-btn:hover{
-    border: 1px solid var(--black);
-    background: var(--darkblue);
-    transition: 0.5s;
-  }
-
-.main-btn{
-    width: 84%;
+  .main-btn{
+    width: 100%;
     display: inline-block;
     text-decoration: none;
     text-align: center;
@@ -76,26 +50,15 @@ body{
     cursor: pointer;
     border-radius: 14px;
     background:var(--lightyellow);
+ }
 
-}
 .main-btn:hover{
     border: 1px solid var(--black);
     background: var(--darkyellow);
     transition: 0.5s;
   }
 
-  .loginbox p{
-    margin : 0;
-    padding: 0;
-    font-weight: bold;
-}
-
-.loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.loginbox input[type="password"]{
+  .loginbox input[type="password"]{
     border: none;
     border-bottom: 1px solid var(--black);
     background: transparent;
@@ -103,7 +66,7 @@ body{
     height: 35px;
     color: var(--black);
     font-size: 16px;
-}
+ }
 
 .loginbox input[type="text"]{
     border: none;
@@ -113,4 +76,15 @@ body{
     height: 35px;
     color: var(--black);
     font-size: 16px;
-}
+ }
+
+.loginbox p{
+    margin : 0;
+    padding: 0;
+    font-weight: bold;
+ }
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+ }
