@@ -1,0 +1,31 @@
+:root {
+    /* colors */
+    --lightyellow: #fbb03b;
+    --darkyellow: #f8931f;
+    --lightblue: #65c7d0;
+    --darkblue: #00aac1;
+    --black: #2e2e2e;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    background-color: var(--darkblue);
+  }
+
+.box {
+    width: 650px;
+    height: 700px;
+    background: white;
+    opacity: 1;
+    color: var(--black);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 0px 30px;
+    border-radius: 15px;
+  }
