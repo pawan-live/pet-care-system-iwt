@@ -43,6 +43,11 @@
   font-size: 2em;
 }
 
+.h2-small {
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
 /* colors */
 
 .hero-btn {
@@ -76,4 +81,47 @@
   border: 1px solid var(--black);
   background: var(--darkyellow);
   transition: 0.5s ease-in-out;
+}
+
+/* FOOTER */
+footer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  /* background-color: #2e2e2e; */
+}
+
+.link-container {
+  padding: 4px 0;
+}
+
+footer a,
+footer i {
+  color: black;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-size: 10px;
+}
+
+.footer-container {
+  border: 1px solid green;
+  justify-content: space-evenly;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-links-container {
+  margin-left: 20px;
+}
+
+.footer-title {
+  margin-bottom: 10px;
 }
