@@ -94,12 +94,13 @@ footer {
 }
 
 .link-container {
-  padding: 4px 0;
+  padding: 5px 0;
 }
 
 footer a,
 footer i {
   color: black;
+  font-size: 1.2em;
 }
 
 footer a {
@@ -107,15 +108,32 @@ footer a {
 }
 
 footer a:hover {
-  font-size: 10px;
+  font-size: 1.25em;
+  transition: 0.5s ease-in-out;
 }
 
 .footer-container {
   border: 1px solid green;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding: 70px 0;
   width: 75%;
   display: flex;
   flex-direction: row;
+}
+
+#footer-sec-1 {
+}
+
+#footer-sec-2 {
+  margin-left: 70px;
+}
+
+#footer-sec-3 {
+  margin-left: 60px;
+}
+
+#footer-sec-4 {
+  margin-left: 60px;
 }
 
 .footer-links-container {
@@ -124,4 +142,12 @@ footer a:hover {
 
 .footer-title {
   margin-bottom: 10px;
+}
+
+.footer-img-container img {
+  border-radius: 12px;
+}
+
+.footer-app-img {
+  border-radius: 12px;
 }
