@@ -93,13 +93,21 @@ footer {
   /* background-color: #2e2e2e; */
 }
 
+.link-container {
+  padding: 4px 0;
+}
+
 footer a,
 footer i {
-  /* color: white; */
+  color: black;
 }
 
 footer a {
   text-decoration: none;
+}
+
+footer a:hover {
+  font-size: 10px;
 }
 
 .footer-container {
@@ -112,4 +120,8 @@ footer a {
 
 .footer-links-container {
   margin-left: 20px;
+}
+
+.footer-title {
+  margin-bottom: 10px;
 }
