@@ -43,6 +43,11 @@
   font-size: 2em;
 }
 
+.h2-small {
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
 /* colors */
 
 .hero-btn {
@@ -79,3 +84,32 @@
 }
 
 /* FOOTER */
+footer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  /* background-color: #2e2e2e; */
+}
+
+footer a,
+footer i {
+  /* color: white; */
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-container {
+  border: 1px solid green;
+  justify-content: space-evenly;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-links-container {
+  margin-left: 20px;
+}
