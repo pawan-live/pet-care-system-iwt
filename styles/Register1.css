@@ -7,13 +7,12 @@
   --black: #2e2e2e;
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   font-weight: bold;
+  background-color: var(--darkblue);
 }
 
 .form-label{
@@ -24,8 +23,9 @@ body {
 .box {
   width: 650px;
   height: 700px;
-  background: lightgray;
+  background: white;
   opacity: 1;
+  
   color: var(--black);
   top: 50%;
   left: 50%;

@@ -12,12 +12,13 @@ body{
     padding: 0;
     font-family: "Lato", sans-serif;
     font-weight: bold;
+    background-color: var(--darkblue);
 }
 
 .loginbox{
     width: 500px;
     height: 520px;
-    background: lightgray;
+    background: white;
     opacity: 1;
     color: var(--black);
     top: 50%;
