@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 :root {
     /* colors */
-    --lightyellow: #fbb03b;
-    --darkyellow: #f8931f;
-    --lightblue: #65c7d0;
-    --darkblue: #00aac1;
+    --lightyellow: #1b0ab4;
+    --darkyellow: #1547ce;
+    --lightblue: #343adf;
+    --darkblue: #7097da;
     --black: #2e2e2e;
   }
 
@@ -68,10 +71,10 @@ body{
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    color: var(--black);
+    color: white;
     border: 1px solid var(--black);
     padding: 12px 34px;
-    font-size: 18px;
+    font-size: 18px;  
     background: transparent;
     position: relative;
     cursor: pointer;
