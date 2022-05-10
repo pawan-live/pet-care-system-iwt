@@ -102,7 +102,7 @@ ul li a:hover{
     background-color: var(--lightblue);
   }
 
-  .main-btn{
+  .main-header-btn{
     width: 12%;
     display: inline-block;
     text-decoration: none;
@@ -120,13 +120,13 @@ ul li a:hover{
     background:var(--lightyellow);
 
 }
-.main-btn:hover{
+.main-header-btn:hover{
     border: 1px solid var(--black);
     background: var(--darkyellow);
     transition: 0.5s;
   }
 
-  .hero-btn{
+  .hero-header-btn{
     width: 13%;
     display: inline-block;
     text-decoration: none;
@@ -144,12 +144,8 @@ ul li a:hover{
     background: var(--lightblue);
   }
 
-  .hero-btn:hover{
+  .hero-header-btn:hover{
     border: 1px solid var(--black);
     background: var(--darkblue);
     transition: 0.5s;
-  }
-
-  #btn{
-    padding: 0px 5px;
   }
