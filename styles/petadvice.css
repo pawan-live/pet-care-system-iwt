@@ -1,0 +1,52 @@
+.sub-header{
+     
+    text-align: center;
+    background-color: rgb(226, 222, 222);
+    padding: 50px;
+
+}
+.sub-header h3{
+    font-weight:700;
+    font-size: 35px;
+}
+
+.sub-header p{
+   display: inline-block;
+    margin: 10px 0 40px;
+    font-size: 15px;
+    
+}
+.search{
+    padding-bottom: 30px;
+}
+.container{
+    display: flex;
+   justify-content: center;
+   
+}
+.dog{
+    padding: 50px;
+
+}
+.dog p{
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 30px;
+
+}
+.dog img{
+    width: 100px;
+    height: 150px;
+    border-radius: 50%;
+}
+.advise h3{
+    text-align: center;
+    padding-top: 20px;
+}
+.sub-footer{
+    text-align: center;
+}
+.sub-footer p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
