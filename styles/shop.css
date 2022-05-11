@@ -1,7 +1,4 @@
-body{
-    padding-left: 30px;
-    padding-right: 30px;
-}
+
 .search{
     text-align: center;
     padding: 45px; 
@@ -34,21 +31,30 @@ body{
     margin-left: 30px;
 }
 
-.medical input{
-    width: 40%;
+.medical input ,.PetFood input{
+    width: 200px;
+    height: 200px;
     padding-bottom: 20PX;
+    
 }
-.medical{
+.medical ,.PetFood{
     display: flex;
     justify-content: space-evenly;
+    padding-top: 40px;
 
 }
-.sub-medical{
+.sub-medical ,.sub-pet{
     text-align: center;
     padding-bottom: 40px;
 }
 .h4edit{
-    margin-left: 20px ;
+   
+    padding: 30px;
 }
-
-+
+.row1{
+    display: flex;
+}
+.load{
+    text-align: center;
+    padding: 30px;
+}
