@@ -49,18 +49,26 @@
     <main>
       <div class="main-wrapper">
         <!-- search section -->
-        <div class="search-section flex row">
-          <div class="back-btn-container">
-            <button class="btn-round back">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
+        <div class="search-section">
+          <div class="flex row">
+            <div class="back-btn-container">
+              <button id="searchbar-back-btn" class="btn-round back">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="search-container">
+              <i class="icon fa-solid fa-magnifying-glass"></i>
+              <input class="search-bar" type="text" value="Search here" />
+              <button id="shop-search-btn" class="btn searchbar-btn">
+                Search
+              </button>
+            </div>
           </div>
-          <div class="search-container">
-            <i class="icon fa-solid fa-magnifying-glass"></i>
-            <input type="text" />
-            <button class="search-bar-btn">Search</button>
+          <div class="tags-container">
+            <div class="btn searchbar-tag">Supplements</div>
+            <div class="btn searchbar-tag">Cat Food</div>
+            <i class="btn-round fa-solid fa-angle-down"></i>
           </div>
-          <div class="tags-container"></div>
         </div>
       </div>
     </main>

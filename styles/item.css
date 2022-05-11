@@ -1,5 +1,8 @@
 * {
   font-family: "Lato", sans-serif;
+  /* box-sizing: ; */
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -47,7 +50,7 @@ nav {
   font-size: 1.1em;
   border-radius: 25px;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -74,20 +77,97 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid rgb(253, 153, 153);
 }
+
+/* main wrapper styles
+this adds a spacing to left and right of the page */
 
 .main-wrapper {
   width: 75%;
-  max-width: 700px;
+  max-width: 1000px;
+  min-width: 750px;
   padding: 0 50px;
+  border: 1px dotted hotpink;
 }
+
+/* search bar */
+
+.search-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  /* border: 1px solid rgb(156, 156, 255); */
+}
+
+/* .left-col {
+  display: flex;
+  flex-direction: row;
+} */
 
 .btn-round {
   border: none;
   border-radius: 25px;
   background-color: white;
-  padding: 5px 8px;
+  padding: 8px 11px;
   cursor: pointer;
   font-size: 1.2em;
   box-shadow: 1px 1px 10px rgb(202, 202, 202);
+  color: #8c8c8c;
+}
+
+#searchbar-back-btn {
+  position: relative;
+  margin-right: 25px;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn.searchbar-btn {
+  background-color: #b9d01e;
+  border-radius: 0 25px 25px 0;
+  padding-right: 16px;
+  margin-left: -3px;
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
+}
+
+.btn.searchbar-btn:hover {
+  background-color: #e7f390;
+  color: #a8bf0c;
+}
+
+.search-bar {
+  border: none;
+  font-size: 1.1em;
+  padding: 8px 0 8px 40px;
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
+  border-radius: 25px 0 0 25px;
+  /* margin-left: 30px; */
+  color: #8c8c8c;
+}
+
+.icon.fa-magnifying-glass {
+  position: relative;
+  z-index: 2;
+  margin-right: -35px;
+  color: #8c8c8c;
+}
+
+.btn.searchbar-tag {
+  font-weight: 500;
+  background-color: #e7f390;
+  color: #a8bf0c;
+  margin-right: 8px;
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
+}
+
+.btn.searchbar-tag:hover {
+  background-color: #b9d01e;
+  color: white;
 }
