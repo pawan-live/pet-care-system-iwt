@@ -5,9 +5,6 @@
   padding: 0;
 }
 
-body {
-}
-
 p {
   font-size: 1.1em;
 }
@@ -306,7 +303,7 @@ label {
 
 .item-price {
   font-size: 2.2em;
-  font-weight: 800;
+  font-weight: 700;
   color: #a8bf0c;
   margin-top: 18px;
 }
@@ -364,4 +361,73 @@ label {
   font-size: 1em;
   color: #8c8c8c;
   padding: 4px 12px 7px 12px;
+}
+
+/* Tab bar */
+.tab-bar {
+  margin-top: 25px;
+}
+
+.tab-bar button {
+  margin-right: 5px;
+}
+
+.tab-btn {
+  border: none;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.tab-btn.active-tab {
+  background-color: #f89e86;
+  color: white;
+  cursor: default;
+}
+
+.tab-btn.inactive-tab {
+  color: #8c8c8c;
+}
+
+.tab-btn.inactive-tab:hover {
+  background-color: #f9d1c6;
+  color: #eb7f63;
+  transition: 0.3s ease-in-out;
+}
+
+/* tab contents */
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 14px rgb(216, 216, 216);
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-top: 24px;
+  margin-bottom: 18px;
+  font-size: 1em;
+}
+
+.tab-content h3 {
+  font-size: 1.3em;
+}
+
+.tab-content p {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+/* tab content display */
+#tab-content-desc {
+  display: flex;
+}
+#tab-content-specs {
+  display: flex;
+}
+#tab-content-reviews {
+  display: flex;
 }
