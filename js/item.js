@@ -1,3 +1,5 @@
+// tabbed view
+// tabName = the id of the tab button referring to
 function openTab(evt, tabName) {
   var i, tabContent, tabButtons;
 
@@ -14,5 +16,3 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
-
-// openTab();

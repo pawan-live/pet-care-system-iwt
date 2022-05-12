@@ -201,6 +201,8 @@
             </button>
             <!-- tab content -->
           </div>
+
+          <!-- item description -->
           <div id="tab-content-desc" class="tab-content">
             <h3 id="item-desc-title">Club 4 Paws Dog Food</h3>
             <p id="item-desc">
@@ -210,6 +212,9 @@
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
+
+          <!-- item specifications -->
+
           <div id="tab-content-specs" class="tab-content">
             <h3>Specifications</h3>
             <p id="item-specs">
@@ -221,16 +226,114 @@
           </div>
           <div id="tab-content-reviews" class="tab-content">
             <h3>Reviews</h3>
-            <p id="item-reviews">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <p id="item-reviews-error" class="error-text">
+              No reviews yet. <a href="#">Write a review.</a>
             </p>
+            <!-- generate this part with php based on the no. of reviews -->
+            <!-- 1 review -->
+            <div class="review-container">
+              <p class="review-name">James Bond</p>
+              <p class="review-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="star-count">
+                <i class="fa-solid fa-star"></i>
+                <p><span>4.5</span> Stars</p>
+              </div>
+            </div>
+            <div class="review-container">
+              <p class="review-name">James Bond</p>
+              <p class="review-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="star-count">
+                <i class="fa-solid fa-star"></i>
+                <p><span>4.5</span> Stars</p>
+              </div>
+            </div>
+            <div class="review-container">
+              <p class="review-name">James Bond</p>
+              <p class="review-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="star-count">
+                <i class="fa-solid fa-star"></i>
+                <p><span>4.5</span> Stars</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <div id="footer-sec-1" class="footer-img-container">
+          <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
+        </div>
+        <div id="footer-sec-2" class="footer-links-container flex column">
+          <p class="h2-small footer-title">Navigation</p>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Home</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Schedule 2</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Advice</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Support</a>
+          </div>
+        </div>
+        <div id="footer-sec-3" class="footer-links-container flex column">
+          <p class="h2-small footer-title">Other Links</p>
+
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Blog</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Reviews</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Carreers</a>
+          </div>
+          <div class="link-container">
+            <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+            <a class="footer-link" href="#">Contact</a>
+          </div>
+        </div>
+        <div id="footer-sec-4" class="footer-app-container flex column">
+          <p class="h2-small footer-title">Download the App</p>
+          <a href="#">
+            <img
+              class="footer-app-img"
+              src="../images/footer/app-store-download.png"
+              alt=""
+            />
+          </a>
+          <a href="#">
+            <img
+              class="footer-app-img"
+              src="../images/footer/play-store-download.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="footer-text">Copyright 2022 Group 09 | Flying Monkeys</div>
+    </footer>
     <script src="../js/item.js"></script>
   </body>
 </html>
