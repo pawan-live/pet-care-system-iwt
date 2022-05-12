@@ -8,14 +8,11 @@ function openTab(evt, tabName) {
 
   tabButtons = document.getElementsByClassName("tab-btn");
   for (i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].className = tabButtons[i].className.replace(
-      "active-tab",
-      "inactive-tab"
-    );
+    tabButtons[i].className = tabButtons[i].className.replace(" active", "");
   }
 
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += "active-btn";
+  document.getElementById(tabName).style.display = "flex";
+  evt.currentTarget.className += " active";
 }
 
 // openTab();

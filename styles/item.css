@@ -366,6 +366,8 @@ label {
 /* Tab bar */
 .tab-bar {
   margin-top: 25px;
+  display: flex;
+  flex-direction: row;
 }
 
 .tab-bar button {
@@ -373,6 +375,7 @@ label {
 }
 
 .tab-btn {
+  color: #8c8c8c;
   border: none;
   padding: 8px 15px;
   font-size: 1.1em;
@@ -382,17 +385,13 @@ label {
   transition: 0.3s ease-in-out;
 }
 
-.tab-btn.active-tab {
+.tab-btn.active {
   background-color: #f89e86;
   color: white;
   cursor: default;
 }
 
-.tab-btn.inactive-tab {
-  color: #8c8c8c;
-}
-
-.tab-btn.inactive-tab:hover {
+.tab-btn:hover {
   background-color: #f9d1c6;
   color: #eb7f63;
   transition: 0.3s ease-in-out;
@@ -408,7 +407,7 @@ label {
   padding: 14px 16px;
   border-radius: 12px;
   margin-top: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 50px;
   font-size: 1em;
 }
 
@@ -425,9 +424,7 @@ label {
 #tab-content-desc {
   display: flex;
 }
-#tab-content-specs {
-  display: flex;
-}
+#tab-content-specs,
 #tab-content-reviews {
-  display: flex;
+  display: none;
 }

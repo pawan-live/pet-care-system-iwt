@@ -180,22 +180,22 @@
           <div class="tab-bar">
             <button
               id="tab-description"
-              class="tab-btn active-tab"
-              onclick="openTab(event, 'tab-description')"
+              class="tab-btn active"
+              onclick="openTab(event, 'tab-content-desc')"
             >
               Description
             </button>
             <button
               id="tab-specs"
-              class="tab-btn inactive-tab"
-              onclick="openTab(event, 'tab-specs')"
+              class="tab-btn"
+              onclick="openTab(event, 'tab-content-specs')"
             >
               Specifications
             </button>
             <button
               id="tab-reviews"
-              class="tab-btn inactive-tab"
-              onclick="openTab(event, 'tab-reviews')"
+              class="tab-btn"
+              onclick="openTab(event, 'tab-content-reviews')"
             >
               Reviews
             </button>
@@ -203,7 +203,7 @@
           </div>
           <div id="tab-content-desc" class="tab-content">
             <h3 id="item-desc-title">Club 4 Paws Dog Food</h3>
-            <p>
+            <p id="item-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -212,17 +212,25 @@
           </div>
           <div id="tab-content-specs" class="tab-content">
             <h3>Specifications</h3>
-            <p>
+            <p id="item-specs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div id="tab-content-reviews" class="tab-content">Reviews here</div>
+          <div id="tab-content-reviews" class="tab-content">
+            <h3>Reviews</h3>
+            <p id="item-reviews">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
         </div>
       </div>
     </main>
-    <!-- <script src="../js/item.js"></script> -->
+    <script src="../js/item.js"></script>
   </body>
 </html>
