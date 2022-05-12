@@ -1,122 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-    /* colors */
-    --lightyellow: #1b0ab4;
-    --darkyellow: #1547ce;
-    --lightblue: #343adf;
-    --darkblue: #7097da;
-    --black: #2e2e2e;
-  }
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    /* background-color: ); */
+  /* colors */
+  --lightyellow: #1b0ab4;
+  --darkyellow: #1547ce;
+  --lightblue: #343adf;
+  --darkblue: #7097da;
+  --black: #2e2e2e;
 }
 
-.loginbox{
-    width: 500px;
-    height: 520px;
-    background: rgba(56, 60, 60, 0.2);
-    opacity: 1;
-    color: var(--black);
-    top: 40%;
-    left: 50%;
-    position: relative;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 50px 30px;
-    border-radius: 15px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  /* font-weight: bold; */
+  /* background-color: ); */
+}
+
+.loginbox {
+  width: 500px;
+  height: 520px;
+  background: rgba(56, 60, 60, 0.2);
+  opacity: 1;
+  color: var(--black);
+  top: 40%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 50px 30px;
+  border-radius: 15px;
 }
 
 .h1-large {
-    color: var(--black);
-    padding: 0 0 20px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 3.2em;
-  }
-
-.hero-btn{
-    width: 84%;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    color: var(--black);
-    border: 1px solid var(--black);
-    padding: 12px 34px;
-    font-size: 18px;
-    height: 20px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    border-radius: 14px;
-    background: var(--lightblue);
-  }
-
-  .hero-btn:hover{
-    border: 1px solid var(--black);
-    background: var(--darkblue);
-    transition: 0.5s;
-  }
-
-.main-btn{
-    width: 84%;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    border: 1px solid var(--black);
-    padding: 12px 34px;
-    font-size: 18px;  
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    border-radius: 14px;
-    background:var(--lightyellow);
-
-}
-.main-btn:hover{
-    border: 1px solid var(--black);
-    background: var(--darkyellow);
-    transition: 0.5s;
-  }
-
-  .loginbox p{
-    margin : 0;
-    padding: 0;
-    font-weight: bold;
+  color: var(--black);
+  padding: 0 0 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.2em;
 }
 
-.loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
+.hero-btn {
+  width: 84%;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 12px 34px;
+  font-size: 18px;
+  height: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 14px;
+  background: var(--lightblue);
 }
 
-.loginbox input[type="password"]{
-    border: none;
-    border-bottom: 1px solid var(--black);
-    background: transparent;
-    outline: none;
-    height: 35px;
-    color: var(--black);
-    font-size: 16px;
+.hero-btn:hover {
+  border: 1px solid var(--black);
+  background: var(--darkblue);
+  transition: 0.5s;
 }
 
-.loginbox input[type="text"]{
-    border: none;
-    border-bottom: 1px solid var(--black);
-    background: transparent;
-    outline: none;
-    height: 35px;
-    color: var(--black);
-    font-size: 16px;
+.main-btn {
+  width: 84%;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border: 1px solid var(--black);
+  padding: 12px 34px;
+  font-size: 18px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 14px;
+  background: var(--lightyellow);
+}
+.main-btn:hover {
+  border: 1px solid var(--black);
+  background: var(--darkyellow);
+  transition: 0.5s;
+}
+
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.loginbox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid var(--black);
+  background: transparent;
+  outline: none;
+  height: 35px;
+  color: var(--black);
+  font-size: 16px;
+}
+
+.loginbox input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--black);
+  background: transparent;
+  outline: none;
+  height: 35px;
+  color: var(--black);
+  font-size: 16px;
 }
 
 :root {
@@ -128,20 +131,14 @@ body{
   --black: #2e2e2e;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.main{  
+.main {
   width: 100%;
   background-position: center;
   background-size: cover;
   background-color: white;
   height: 109vh;
-  font-weight: bold;
 }
-
+/* 
 .navbar{
   width: auto;
   height: 85px;
@@ -269,4 +266,4 @@ ul li a:hover{
   border: 1px solid var(--black);
   background: var(--darkblue);
   transition: 0.5s;
-}
+} */

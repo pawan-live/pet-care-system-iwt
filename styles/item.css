@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 p {
   font-size: 1.1em;
 }
@@ -17,87 +21,10 @@ p {
   font-weight: 800;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 25px;
-  height: 80px;
-  box-shadow: 0 10px 12px rgb(211, 211, 211);
-}
-
-.nav-logo img {
-  width: 150px;
-}
-
-.nav-menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  margin: 10px 10px;
-  font-size: 1.1em;
-  color: var(--black);
-}
-
-.nav-menu a:hover {
-  color: #eb7f63;
-  font-weight: 700;
-  transition: 0.3s linear;
-}
-
-.nav-menu a.active-link {
-  font-weight: 700;
-  color: #eb7f63;
-}
-
-/* BUTTONS STYLES */
-
-.btn {
-  border: none;
-  padding: 8px 15px;
-  font-size: 1.1em;
-  border-radius: 25px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.btn.btn-dark {
-  background-color: #f89e86;
-  color: white;
-}
-
-.btn.btn-dark:hover {
-  background-color: #f9d1c6;
-  color: #eb7f63;
-  transition: 0.3s ease-in-out;
-}
-
-.btn.btn-light {
-  background-color: #f9d1c6;
-  color: #eb7f63;
-}
-
-.btn.btn-light:hover {
-  background-color: #f89e86;
-  color: white;
-  transition: 0.3s ease-in-out;
-}
-
-#login-btn {
-  margin-right: 5px;
-}
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid rgb(253, 153, 153); */
 }
 
 /* main wrapper styles
@@ -108,7 +35,8 @@ this adds a spacing to left and right of the page */
   max-width: 1000px;
   min-width: 750px;
   padding: 0 50px;
-  /* border: 1px dotted hotpink; */
+  background-color: white;
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136);
 }
 
 /* search bar */
@@ -119,7 +47,6 @@ this adds a spacing to left and right of the page */
   align-items: center;
   justify-content: space-between;
   margin: 50px 0 50px 0;
-  /* border: 1px solid rgb(156, 156, 255); */
 }
 
 .btn-round {
@@ -164,7 +91,6 @@ this adds a spacing to left and right of the page */
   padding: 8px 0 8px 40px;
   box-shadow: 0 4px 15px rgb(202, 202, 202);
   border-radius: 25px 0 0 25px;
-  /* margin-left: 30px; */
   color: #8c8c8c;
 }
 
@@ -191,7 +117,6 @@ this adds a spacing to left and right of the page */
 .column-1 {
   width: 50%;
   padding-right: 10px;
-  /* border: 1px solid rgb(121, 251, 223); */
 }
 
 .column-2 {
@@ -202,11 +127,8 @@ this adds a spacing to left and right of the page */
 /* item image section */
 
 .item-section {
-  /* height: 100%; */
-  /* max-height: 700px; */
   display: flex;
   flex-direction: row;
-  /* border: 1px solid slateblue; */
 }
 
 .item-main-img {
@@ -328,7 +250,6 @@ label {
 .btn.btn-light.buy-now {
   padding: 12px 20px;
   box-shadow: 0 4px 12px rgb(216, 216, 216);
-  /* margin-right: 5px; */
 }
 
 .divider {
