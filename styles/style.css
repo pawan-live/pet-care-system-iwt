@@ -19,6 +19,21 @@ body {
   background-repeat: no-repeat;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-wrapper {
+  width: 75%;
+  max-width: 1000px;
+  min-width: 750px;
+  padding: 0 50px;
+  background-color: white;
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136);
+}
+
 .flex {
   display: flex;
 }
