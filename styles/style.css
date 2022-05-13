@@ -13,6 +13,27 @@
   margin: 0px;
 }
 
+body {
+  background: url("../images/main/back-drop-svg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-wrapper {
+  width: 75%;
+  max-width: 1000px;
+  min-width: 750px;
+  padding: 0 50px;
+  background-color: white;
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136);
+}
+
 .flex {
   display: flex;
 }
@@ -87,6 +108,86 @@
   font-size: 1.1em;
 }
 
+/* NAVBAR */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.136);
+  position: relative;
+  z-index: 99;
+}
+
+.nav-logo img {
+  width: 170px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  margin: 10px 10px;
+  font-size: 1.1em;
+  color: var(--black);
+}
+
+.nav-menu a:hover {
+  color: #eb7f63;
+  font-weight: 700;
+  transition: 0.3s linear;
+}
+
+.nav-menu a.active-link {
+  font-weight: 700;
+  color: #eb7f63;
+}
+
+/* BUTTONS STYLES */
+
+.btn {
+  border: none;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn.btn-dark {
+  background-color: #f89e86;
+  color: white;
+}
+
+.btn.btn-dark:hover {
+  background-color: #f9d1c6;
+  color: #eb7f63;
+  transition: 0.3s ease-in-out;
+}
+
+.btn.btn-light {
+  background-color: #f9d1c6;
+  color: #eb7f63;
+}
+
+.btn.btn-light:hover {
+  background-color: #f89e86;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+#login-btn {
+  margin-right: 5px;
+}
+
 /* FOOTER */
 footer {
   width: 100vw;
@@ -95,8 +196,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid red; */
   background-color: var(--black);
+  box-shadow: 0px -10px 12px rgba(0, 0, 0, 0.23);
+  position: relative;
+  z-index: 98;
 }
 
 .link-container {
