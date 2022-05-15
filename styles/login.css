@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 
-:root {
-  /* colors */
+/* :root {
+  
   --lightyellow: #1b0ab4;
   --darkyellow: #1547ce;
   --lightblue: #343adf;
   --darkblue: #7097da;
   --black: #2e2e2e;
-}
+} */
 
 * {
   margin: 0;
