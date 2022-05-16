@@ -1,0 +1,45 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 75%;
+  max-width: 1000px;
+  min-width: 750px;
+  padding: 0 50px;
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.4em;
+  margin: 25px 0;
+}
+
+button {
+  margin-top: 5px;
+}
+
+.hero-section {
+  height: 250px;
+  /* position: relative; */
+  color: white;
+  background-image: url("../images/home/hero-background.jpg");
+  /* background-position: 0%; */
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.445);
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section p {
+  padding: 0 100px;
+}
