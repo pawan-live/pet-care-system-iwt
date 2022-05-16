@@ -1,0 +1,187 @@
+
+
+.head1
+{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 3.2em;
+    position: absolute;
+    left: 33%;
+    top: 75px;
+
+}
+
+.back
+{
+position: absolute;
+width: 100%;
+height: 200px;
+left: 0px;
+top: 60px;
+background-color: #E59866 ;
+
+
+}
+
+.pic
+{
+position: absolute;
+width: 432px;
+height: 353px;
+left: 280px;
+top: 320px;
+}
+
+.header2
+{
+position: absolute;
+width: 520px;
+height: 129px;
+left: 60%;
+top: 310px;
+font-weight: 700;
+font-size: 2.4em;
+}
+
+.para
+{
+    position: absolute;
+    width: 520px;
+    height: 129px;
+    left: 60%;
+    top: 380px;
+}
+
+.rec0
+{
+position: absolute;
+width: 100%;
+height: 455px;
+left: 0px;
+top: 800px;
+background-color: #F5CBA7;
+}
+
+.rec1
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 100px;
+    top: 80px;
+    background-color: #E59866  ;
+}
+
+.rec2
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 600px;
+    top: 80px;
+    background-color: #E59866 ;  
+}
+
+.rec3
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1100px;
+    top: 80px;
+    background-color: #E59866 ;  
+}
+
+.rec1 h2
+{
+    font-weight: 600;
+    font-size: 3.0em;
+    text-align: center; 
+}
+
+.rec1 p
+{
+    font-weight: 300;
+    font-size: 2.0em;
+    text-align: center;  
+}
+
+.rec2 h2
+{
+    font-weight: 600;
+    font-size: 3.0em;
+    text-align: center;  
+}
+
+.rec2 p
+{
+    font-weight: 300;
+    font-size: 2.0em;
+    text-align: center;  
+}
+
+.rec3 h2
+{
+    font-weight: 600;
+    font-size: 3.0em;
+    text-align: center;  
+}
+
+.rec3 p
+{
+    font-weight: 300;
+    font-size: 2.0em;
+    text-align: center;  
+}
+
+.pic2
+{
+    position: absolute;
+    width: 432px;
+    height: 353px;
+    top: 1350px;
+    left: 730px;
+}
+
+.para-1
+{
+    position: absolute;
+    width: 432px;
+    height: 353px;
+    top: 1350px;
+    left: 300px;  
+}
+
+.h2-1
+{
+    position: absolute;
+    width: 432px;
+    height: 129px;
+    top: 1263px;
+    left: 300px; 
+    font-weight: 700;
+    font-size: 2.4em;   
+}
+ 
+.footer_position{
+  position: absolute;
+  top: 1800px;
+}  
+
+.position_1{
+    position: absolute;
+    top: 7%;
+}
+.position_2{
+    position: absolute;
+    left: 900px;
+}
+.position_3{
+    position: absolute;
+    top: 0px;
+}
+
+.position_4{
+    position: absolute;
+    left: 10px;
+}
