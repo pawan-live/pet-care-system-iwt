@@ -24,17 +24,17 @@ body {
 
 .loginbox {
   width: 500px;
-  height: 520px;
-  background: rgba(56, 60, 60, 0.2);
+  background: white;
   opacity: 1;
   color: var(--black);
-  top: 40%;
+  top: 60%;
   left: 50%;
-  position: relative;
+  position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 50px 30px;
   border-radius: 15px;
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
 }
 
 .h1-large {
@@ -42,7 +42,7 @@ body {
   padding: 0 0 20px;
   text-align: center;
   font-weight: 700;
-  font-size: 3.2em;
+  font-size: 1.8em;
 }
 
 .hero-btn {
@@ -76,18 +76,18 @@ body {
   text-align: center;
   font-weight: bold;
   color: white;
-  border: 1px solid var(--black);
+  border: 1px solid ;
   padding: 12px 34px;
   font-size: 18px;
   background: transparent;
   position: relative;
   cursor: pointer;
   border-radius: 14px;
-  background: var(--lightyellow);
+  background: #f89e86;
 }
 .main-btn:hover {
-  border: 1px solid var(--black);
-  background: var(--darkyellow);
+  border: 1px solid;
+  background: #f9d1c6;
   transition: 0.5s;
 }
 
@@ -120,6 +120,10 @@ body {
   height: 35px;
   color: var(--black);
   font-size: 16px;
+}
+
+.loginbox button {
+  width: 100%;
 }
 
 :root {
