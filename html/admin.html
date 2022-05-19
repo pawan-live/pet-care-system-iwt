@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <title>Page | BawBaw.lk</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="nav-logo">
+        <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      </div>
+      <div class="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active-link" href="#">Admin Panel</a></li>
+          <!-- <li><a class="nav-link" href="#">Pet Advice</a></li> -->
+          <!-- <li><a class="nav-link" href="#">Shop</a></li> -->
+          <!-- <li><a class="nav-link" href="#"></a></li> -->
+          <!-- <li><a class="nav-link" href="#">About</a></li> -->
+        </ul>
+      </div>
+      <div class="nav-buttons">
+        <button id="login-btn" class="btn">Logout</button>
+        <!-- <button id="reg-btn" class="btn btn-dark">Join Now</button> -->
+      </div>
+    </nav>
+
+    <main>
+      <div class="column-left">
+        <div class="tab-bar">
+          <!-- btn 1 summary -->
+          <button
+            id="tab-summary"
+            class="tab-btn active"
+            onclick="openTab(event, 'tab-content-summary')"
+          >
+            Summary
+          </button>
+          <!-- items -->
+          <button
+            id="tab-items"
+            class="tab-btn"
+            onclick="openTab(event, 'tab-content-items')"
+          >
+            Items
+          </button>
+          <!-- Appointments -->
+          <button
+            id="tab-appointments"
+            class="tab-btn"
+            onclick="openTab(event, 'tab-content-appointments')"
+          >
+            Appointments
+          </button>
+          <!-- Orders -->
+          <button
+            id="tab-orders"
+            class="tab-btn"
+            onclick="openTab(event, 'tab-content-orders')"
+          >
+            Orders
+          </button>
+          <!-- Reviews -->
+          <button
+            id="tab-reviews"
+            class="tab-btn"
+            onclick="openTab(event, 'tab-content-reviews')"
+          >
+            Reviews
+          </button>
+          <!-- Inquiries -->
+          <button
+            id="tab-inq"
+            class="tab-btn"
+            onclick="openTab(event, 'tab-content-inq')"
+          >
+            Inquiries
+          </button>
+        </div>
+      </div>
+      <div class="column-right">
+        <!-- tab content -->
+        <!-- summary -->
+        <div id="tab-content-summary" class="tab-content">
+          <h3 id="tab-title">BawBaw.lk Summary</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <!-- items -->
+        <div id="tab-content-items" class="tab-content">
+          <h3 id="tab-title">All Items</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <!-- appointments -->
+        <div id="tab-content-appointments" class="tab-content">
+          <h3 id="tab-title">All Appointments</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <!-- reviews -->
+        <div id="tab-content-reviews" class="tab-content">
+          <h3 id="tab-title">Reviews</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <!-- inquiries -->
+        <div id="tab-content-inq" class="tab-content">
+          <h3 id="tab-title">Inquiries</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <!-- Orders -->
+        <div id="tab-content-orders" class="tab-content">
+          <h3 id="tab-title">Orders</h3>
+          <p id="tab-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

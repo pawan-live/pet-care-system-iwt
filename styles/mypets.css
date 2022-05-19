@@ -1,11 +1,49 @@
-.column-1 {
+p {
+  font-size: 1.1em;
+}
+
+.column-left {
   display: flex;
   flex-direction: column;
 
+  min-width: 280px;
   border-right: 1px solid black;
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136);
+  margin: 0px 0;
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-container {
+  /* box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136); */
+}
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: -70px 0;
+  /* box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136); */
 }
 
 .pet-img {
   position: relative;
   border-radius: 200px;
+}
+
+.name-container,
+.breed-container,
+.gender-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* margins for icons */
+.name-container i,
+.gender-container i {
+  margin-left: 5px;
 }

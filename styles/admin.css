@@ -1,0 +1,108 @@
+body {
+  overflow-x: hidden;
+}
+
+main {
+  /* width: 100vw; */
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: white;
+  position: relative;
+}
+
+.column-left {
+  /* position: relative; */
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 15px;
+  border: 1px solid red;
+}
+
+.column-right {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 15px;
+  border: 1px solid blue;
+}
+
+/* Tab bar */
+.tab-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tab-bar button {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.tab-btn {
+  color: #8c8c8c;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.tab-btn.active {
+  background-color: #f89e86;
+  color: white;
+  cursor: default;
+}
+
+.tab-btn:hover {
+  background-color: #f9d1c6;
+  color: #eb7f63;
+  transition: 0.3s ease-in-out;
+}
+
+/* tab contents */
+
+.tab-content {
+  display: flex;
+  /* height: 100vh; */
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 14px rgb(216, 216, 216);
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-top: 3px;
+  margin-bottom: 50px;
+  font-size: 1em;
+}
+
+.tab-content h3 {
+  font-size: 1.4em;
+}
+
+.tab-content p {
+  margin-top: 14px;
+  font-size: 1.2em;
+}
+
+/* tab content display */
+/* default tab */
+#tab-content-summary {
+  display: flex;
+}
+
+/* non-default tabs to be hidden */
+#tab-content-items,
+#tab-content-appointments,
+#tab-content-reviews,
+#tab-content-inq,
+#tab-content-orders {
+  display: none;
+}
