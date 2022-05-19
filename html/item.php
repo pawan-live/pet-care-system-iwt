@@ -77,11 +77,14 @@
           <div class="column-1 flex column">
             <div class="item-img-container">
               <div class="main-img-container">
-                <img
+                <!-- <img
                   class="item-main-img"
                   src="http://placehold.jp/500x500.png"
                   alt="Main image"
-                />
+                /> -->
+          
+              
+
               </div>
               <div class="mini-img-container">
                 <img src="http://placehold.jp/82x82.png" alt="" />

@@ -1,40 +1,62 @@
-:root {
-    /* colors */
+/* :root {
+    
     --lightyellow: #fbb03b;
     --darkyellow: #f8931f;
     --lightblue: #65c7d0;
     --darkblue: #00aac1;
     --black: #2e2e2e;
-  }
+  } */
 
 body {
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
     font-weight: bold;
-    /* background-color: var(--darkblue); */
   }
 
 .box {
     width: 650px;
-    height: 700px;
-    background: lightgray;
-    opacity: 1;
+    background: white;
     color: var(--black);
-    top: 50%;
+    top: 60%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 0px 30px;
+    padding: 30px 30px;
+    margin-bottom: 100px;
     border-radius: 15px;
+    box-shadow: 0 4px 15px rgb(202, 202, 202);
   }
 
-  .h3-large {
-    color: var(--darkblue);
+  select{
+    width: 50%;
+  }
+
+  input{
+    width: 50%;
+  }
+
+  input, textarea, select{
+    box-shadow: 1px 1px 3px rgb(202, 202, 202);
+  }
+
+  .box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 35px;
+    color: black;
+    font-size: 16px;
+  }
+
+  .h3-large1 {
+    color: black;
     font-weight: 600;
-    font-size: 2.4em;
+    font-size: 1.8em;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   #pet{
@@ -44,38 +66,47 @@ body {
     border: none;
   }
 
+  .marg{
+    margin-bottom: 20px;
+  }
+
  .align{
+   width: 90%;
   position: absolute;
-  top: 24%;
+  top: 20%;
   left: 25%
  }
 
  .align-date{
+  width: 90%;
   position: absolute;
-  top: 52%;
+  top: 53%;
   left: 25%
  }
 
  .align-time{
+  width: 90%;
   position: absolute;
-  top: 60%;
+  top: 61%;
   left: 25%
  }
 
  .align-name{
+  width: 90%;
   position: absolute;
-  top: 70%;
+  top: 71%;
   left: 25%
  }
 
  .align-no{
+  width: 90%;
   position: absolute;
-  top: 78%;
+  top: 79%;
   left: 25%
  }
 
   .txt-area{
-    padding:5xp 5px;
+    padding: 5px 5px;
     margin: 10px 10px;
     border: none;
     border-radius: 5px;
@@ -85,18 +116,24 @@ body {
     border:1px solid black
   }
 
+  p{
+    margin: 10px 10px;
+  }
+
   .pet-btn{
-    /* width: 20%; */
     display: inline-block;
     text-align: center;
-    border: 1px solid var(--black);
+    padding: 2px 2px;
+    border: 1px solid ;
     border-radius: 5px;
     cursor: pointer;
-    background: var(--lightyellow);  
+    background: rgb(228, 228, 228); 
+    transition: 0.3s ease-in-out;
+ 
   }
 
   .pet-btn:hover{
-    background: var(--darkyellow);
+    background: rgb(199, 199, 199);
   }
 
   .hero-btn {
@@ -118,3 +155,7 @@ body {
     background: var(--darkblue);
     transition: 0.5s ease-in-out;
   }
+
+#book{
+  width: 100%;
+}

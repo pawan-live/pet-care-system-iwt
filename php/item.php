@@ -77,48 +77,46 @@
           <div class="column-1 flex column">
             <div class="item-img-container">
               <div class="main-img-container">
-                 <!-- <img
+                <!-- <img
                   class="item-main-img"
-                  src=""
+                  src="http://placehold.jp/500x500.png"
                   alt="Main image"
-                />  -->
-                <?php
+                /> -->
+                  <?php
+                  require "../php/config.php";
+                  
+             
+                  $itemname = $_GET["name"];
+             
+                  $sql = "select * from petstore where name like '%$itemname%'";
 
-                    require 'config.php';
-                    $itemname = $_POST["shopsearch"];
-                    $sql = "select * from petstore where name like '%$itemname%'";
+                  if($result = $conn->query($sql))
+                  {
+                      if($result->num_rows > 0)
+                      {
+                      
+                          
+                          while($row=$result->fetch_assoc()){
+                              
+                             echo"<img class = 'item-main-img' src='{$row["photo"]}'/>";
+                              
+                              echo " <h2 class='item-title column-2 flex column'>{$row["name"]}</h2>";
+                              echo "<p class='item-price  price-container column-2 flex column'>  <span id='item-price'> {$row["price"]} </span></p>";
+                              echo $row["description"];
+                          
 
-                    if($result = $conn->query($sql))
-                    {
-                        if($result->num_rows > 0)
-                        {
-                        
-                            
-                            while($row=$result->fetch_assoc()){
-                                
-                               echo"<img class = 'item-main-img' src='{$row["photo"]}'/>";
-                                
-                                echo " <h2 class='item-title column-2 flex column'>{$row["name"]}</h2>";
-                                echo "<p class='item-price  price-container column-2 flex column'>  <span id='item-price'> {$row["price"]} </span></p>";
-                                echo $row["description"];
-                            
+                          }
+                          
+                      }
+                  }
 
-                            }
-                            
-                        }
-                    }
+                  else{
+                      echo "no results";
+                  }
 
-                    else{
-                        echo "no results";
-                    }
+                  $conn->close();
 
-                    $conn->close();
-
-
-
-                    ?>
-
-              <span></span>
+                  ?>
               
 
               </div>
@@ -135,9 +133,9 @@
           <div class="column-2 flex column">
             <!-- item title -->
             <div class="title-container">
-            
-                
-              
+              <h2 class="item-title">
+                Club 4 Paws Dog Food - Extra Nutrition for your Pet
+              </h2>
             </div>
             <!-- item reviews -->
             <div class="ratings-container flex row">
@@ -180,11 +178,9 @@
             </div>
 
             <!-- price -->
-            
             <div class="price-container">
-              <!-- <p class="item-price">LKR <span id="item-price"></span></p> -->
+              <p class="item-price">LKR <span id="item-price">1700.00</span></p>
             </div>
-            
 
             <!-- buy now buttons -->
             <div class="btn-container">
@@ -380,7 +376,3 @@
     <script src="../js/item.js"></script>
   </body>
 </html>
-
-
-
-

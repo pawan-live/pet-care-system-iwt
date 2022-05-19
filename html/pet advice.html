@@ -20,44 +20,27 @@
     />
 </head>
 <body>
-    <div class="main">
-        <div class="navbar">
-            <h2 class="logo">BawBaw</h2>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Schedule</a></li>
-                    <li class="dropdown"><a href="#">Pet Advice</a>
-                        <ul class="dropdown-content">
-                            <li><a href="">A</a></li>
-                            <li><a href="">B</a></li>
-                            <li><a href="">C</a></li>
-                        </ul>
-                    </li>                  
-                <li class="dropdown"><a href="#">Shop</a>
-                
-                    <ul class="dropdown-content">
-                        <li><a href="">D</a></li>
-                        <li><a href="">E</a></li>
-                        <li><a href="">F</a></li>
-                    </ul>
-                </li>             
-                <li class="dropdown"><a href="#">Help</a>
-                
-                    <ul class="dropdown-content">
-                        <li><a href="">G</a></li>
-                        <li><a href="">H</a></li>
-                        <li><a href="">I</a></li>
-                    </ul>
-                </li>              
-                <li><a href="#">About</a></li>
-                <li><a href="#">  </a></li>
-                <button class="hero-btn">Log In</button>
-                <!-- <li><a href="#" id="btn">  </a></li> -->
-                <button class="main-btn">Join Now</button>
-            </ul>
-        </div>
-    </div>
+   <!-- navbar -->
+<nav>
+  <div class="nav-logo">
+    <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+  </div>
+  <div class="nav-menu-container">
+    <ul class="nav-menu">
+      <li><a class="nav-link active-link" href="#">Home</a></li>
+      <li><a class="nav-link" href="#">Schedule</a></li>
+      <li><a class="nav-link" href="#">Pet Advice</a></li>
+      <li><a class="nav-link" href="#">Shop</a></li>
+      <li><a class="nav-link" href="#">Help</a></li>
+      <li><a class="nav-link" href="#">About</a></li>
+    </ul>
+  </div>
+  <div class="nav-buttons">
+    <button id="login-btn" class="btn btn-light">Login</button>
+    <button id="reg-btn" class="btn btn-dark">Join Now</button>
+  </div>
+</nav>
+<main></main>
      
     <div class="sub-header">
        <h3>online pet health advice</h3>
@@ -77,34 +60,56 @@
       <h3>Dog Advice</h3>
       <div class="container">
        <div class="dog">
-         <img src="../download (2).jpeg" alt="">
+        <button  data-modal-target="#modal" onclick="loaddata('Dhealth')"> <img src="../images/Pet advice/1.jpg.jpg" alt=""></button>
          <p>Health & wellness</p>
        </div>
        <div class="dog">
-         <img src="../puppy-1903313__340.jpg" alt="">
+        <button  data-modal-target="#modal" onclick="loaddata('Dlifestyle')"> <img src="../images/Pet advice/2.jpg.jpeg" alt=""></button>
          <p>Lifestyle</p>
        </div>
        <div class="dog">
-         <img src="../depositphoto.jpg" alt="">
+         <button  data-modal-target="#modal"  onclick="loaddata('Dstress')"><img src="../images/Pet advice/3.jpg.jpg" alt=""></button>
          <p>Stress & anxiety</p>
        </div>
 
       </div>
+       
+      
+      <div class="modal" id="modal">
+         <div class="modal-header">
+          <div class="title"><h4>More info</h4></div>
+          <button data-close-button class="close-button">&times;</button>
+         </div>
+         <div class="modal-body">
+        
+           
+           <div class="image">
+          <img id = "image1"src="" alt="">
+        </div>
+          <div class="content" id="para">
+                
+          </div>
+            
+        </div>
 
-    </section>
+      </div>
+      <div class = "active" id="overlay"></div>
+
+
+         </section>
     <section class="advise">
       <h3>Cat Advice</h3>
       <div class="container">
-       <div class="dog">
-         <img src="../download (2).jpeg" alt="">
+       <div class="cat">
+        <button  data-modal-target="#modal" onclick="loaddata('Chealth')"> <img src="../images/Pet advice/4.jpg.jpg" alt=""></button>
          <p>Health & wellness</p>
        </div>
-       <div class="dog">
-         <img src="../download (3).jpg" alt="">
+       <div class="cat">
+        <button  data-modal-target="#modal" onclick="loaddata('Clifestyle')"> <img src="../images/Pet advice/5.jpg.jpg" alt=""></button>
          <p>Lifestyle</p>
        </div>
-       <div class="dog">
-         <img src="../download (2).jpeg" alt="">
+       <div class="cat">
+        <button  data-modal-target="#modal" onclick="loaddata('Cstress')"> <img src="../images/Pet advice/6.jpg.jpg" alt=""></button>
          <p>Stress & anxiety</p>
        </div>
 
@@ -117,6 +122,7 @@
       <p>We have proffetional vets for help you</p>
       <button class="hero-btn">book an appointment</button>
 </div>
+</main>
 <footer>
     <div class="footer-container">
       <div id="footer-sec-1" class="footer-img-container">
@@ -181,6 +187,7 @@
     </div>
     <div class="footer-text">Copyright 2022 Group 09 | Flying Monkeys</div>
   </footer>
+  <script src="../java script/petadvicemore.js"></script>
     
 </body>
 </html>
