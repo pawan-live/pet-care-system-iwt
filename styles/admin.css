@@ -4,7 +4,7 @@ body {
 
 main {
   /* width: 100vw; */
-  height: calc(100% - 80px);
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -73,6 +73,8 @@ main {
 .tab-content {
   display: flex;
   /* height: 100vh; */
+  width: calc(100% - 50px);
+  min-width: min-content;
   flex-direction: column;
   background-color: white;
   box-shadow: 0 4px 14px rgb(216, 216, 216);
@@ -105,4 +107,115 @@ main {
 #tab-content-inq,
 #tab-content-orders {
   display: none;
+}
+
+/* summary tab */
+.count-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.count-card-container {
+  width: 15%;
+  min-width: 150px;
+  /* max-width: min-content; */
+  box-shadow: 0 4px 14px rgb(216, 216, 216);
+  padding: 10px 15px 15px 15px;
+  margin-right: 15px;
+  border-radius: 12px;
+}
+
+.count-card-container > p {
+  margin-top: 0px;
+  font-size: 1.2em;
+  /* font-weight: 700; */
+}
+
+.count-container > i {
+  font-size: 1.8em;
+  /* margin-right: 5px; */
+}
+
+.count-card-container .count {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.count-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  /* justify-content: center; */
+}
+
+#div-appt-count {
+  background: linear-gradient(to bottom right, #a8ff78, #78ffd6);
+}
+
+#div-order-count {
+  background: linear-gradient(to bottom right, #0ed2f7, #b2fefa);
+}
+
+#div-revenue-count {
+  background: linear-gradient(to bottom right, #f7971e, #ffd200);
+}
+
+#div-user-count {
+  background: linear-gradient(to bottom right, #9796f0, #fbc7d4);
+}
+
+.col-left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgb(216, 216, 216);
+  border-radius: 12px;
+  margin: 15px 0;
+  padding: 15px 15px;
+}
+
+.order-container > p {
+  padding: none;
+  margin: none;
+}
+
+.order-container > h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 5px 0 7px 11px;
+  /* padding-top: 5px;
+  padding-bottom: 7px; */
+  box-shadow: 0 2px 5px rgb(216, 216, 216);
+  border-radius: 25px;
+  margin: 5px 0;
+}
+
+.order-item > p {
+  margin-top: 0;
+}
+
+.order-item i {
+  font-size: 1.1em;
+  margin-right: 10px;
+  color: #7ce842;
+}
+
+.order-item .status {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  background-color: rgb(252, 197, 0);
+  border-radius: 10px;
+  padding: 1px 5px;
 }

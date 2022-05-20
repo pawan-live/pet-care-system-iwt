@@ -72,6 +72,7 @@
             class="tab-btn"
             onclick="openTab(event, 'tab-content-appointments')"
           >
+          
             Appointments
           </button>
           <!-- Orders -->
@@ -104,14 +105,56 @@
         <!-- tab content -->
         <!-- summary -->
         <div id="tab-content-summary" class="tab-content">
-          <h3 id="tab-title">BawBaw.lk Summary</h3>
+          <h3 id="tab-title">Today's Summary</h3>
           <p id="tab-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <!-- counts section -->
+            <div class="count-wrapper">
+              <!-- appointment count -->
+              <div id="div-appt-count" class="count-card-container">
+                <p>Appointments</p>              
+                <div class="count-container">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <p class="count">37</p>
+                </div>
+              </div>
+              <!-- orders count -->
+              <div id="div-order-count" class="count-card-container">
+                  <p>Orders</p>              
+                <div class="count-container">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p class="count">15</p>
+                </div>
+              </div>
+              <!-- revenue count -->
+              <div id="div-revenue-count" class="count-card-container">
+                  <p>Revenue (LKR)</p>              
+                <div class="count-container">
+                  <i class="fa-solid fa-coins"></i>
+                  <p class="count">17,000</p>
+                </div>
+              </div>
+              <!-- users -->
+              <div id="div-user-count" class="count-card-container">
+                  <p>New users</p>              
+                <div class="count-container">
+                  <i class="fa-solid fa-users"></i>
+                  <p class="count">12</p>
+                </div>
+              </div>
+            </div>
+            <!-- lists -->
+            <!-- new orders -->
+            <div class="col-left-container">
+              
+              <div id="order-container" class="order-container">
+                <h2>Latest Orders</h2>
+                <!-- generated from js -->
+              </div>
+            </div>
           </p>
         </div>
+
+
         <!-- items -->
         <div id="tab-content-items" class="tab-content">
           <h3 id="tab-title">All Items</h3>
