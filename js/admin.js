@@ -58,7 +58,7 @@ let lastAppts = [
     pet: "dog",
     "vet-name": "Dr. Jayantha",
     "vet-id": "VT08",
-    date: "21 Jun",
+    date: "21 June",
   },
   {
     "appt-id": "789654",
@@ -66,7 +66,7 @@ let lastAppts = [
     pet: "cat",
     "vet-name": "Dr. Perera",
     "vet-id": "VT05",
-    date: "23 Jun",
+    date: "23 June",
   },
   {
     "appt-id": "795558",
@@ -74,7 +74,7 @@ let lastAppts = [
     pet: "dog",
     "vet-name": "Dr. Nirmali",
     "vet-id": "VT07",
-    date: "23 Jun",
+    date: "23 June",
   },
   {
     "appt-id": "795558",
@@ -82,7 +82,7 @@ let lastAppts = [
     pet: "dog",
     "vet-name": "Dr. Perera",
     "vet-id": "VT05",
-    date: "26 Jun",
+    date: "26 June",
   },
 ];
 
@@ -126,7 +126,7 @@ function renderOrderList(a) {
     orderContainer.innerHTML +=
       '<div class="list-item">' +
       "\n" +
-      '<i class="fa-solid fa-circle-check ' +
+      '<div class="list-left-container"> <i class="fa-solid fa-circle-check ' +
       iconClass +
       '"></i>' +
       "\n" +
@@ -134,7 +134,7 @@ function renderOrderList(a) {
       lastOrders[i].qty +
       '</span> x <span class="item-name" id="item-name">' +
       lastOrders[i]["item-name"] +
-      '</span> <span class="item-price">' +
+      '</span> </div> <div class="list-right-container"> <span class="item-price">' +
       lastOrders[i]["item-price"] +
       '</span> <span class="' +
       statusClass +
@@ -148,7 +148,7 @@ function renderOrderList(a) {
 
 function renderApptList(b) {
   let apptContainer = document.getElementById("appt-container");
-  for (i = 0; i < a; i++) {
+  for (i = 0; i < b; i++) {
     let petIcon, status;
     if (lastAppts[i].pet == "cat") {
       petIcon = '<i class="fa-solid fa-cat"></i>';
@@ -156,25 +156,32 @@ function renderApptList(b) {
       petIcon = '<i class="fa-solid fa-dog"></i>';
     }
 
-    orderContainer.innerHTML +=
-      '<div class="order-item">' +
+    apptContainer.innerHTML +=
+      '<div class="list-item">' +
+      '<div class="list-left-container">' +
       "\n" +
       petIcon +
+      '<p> <span class="item-name">' +
+      lastAppts[i].date +
+      "</span> </p>" +
       "\n" +
-      '<p> <span id="item-qty">' +
-      lastOrders[i].qty +
-      '</span> x <span class="item-name" id="item-name">' +
-      lastOrders[i]["item-name"] +
-      "</span> <span>" +
-      lastOrders[i]["item-price"] +
-      '</span> <span class="' +
-      statusClass +
-      '" id="status">' +
-      status +
-      "</span></p>" +
+      "</div>" +
+      "\n" +
+      '<div class="list-right container">' +
+      "\n" +
+      '<p> <span class="vet-name">' +
+      lastAppts[i]["vet-name"] +
+      "</span>" +
+      "\n" +
+      '<span class="vet-id">' +
+      lastAppts[i]["vet-id"] +
+      "</span> </p>" +
+      "\n" +
+      "</div>" +
       "\n" +
       "</div>";
   }
 }
 
 renderOrderList(lastOrders.length);
+renderApptList(lastAppts.length);
