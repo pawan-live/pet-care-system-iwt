@@ -51,6 +51,41 @@ let lastOrders = [
   },
 ];
 
+let lastAppts = [
+  {
+    "appt-id": "795558",
+    "user-id": "US425",
+    pet: "dog",
+    "vet-name": "Dr. Jayantha",
+    "vet-id": "VT08",
+    date: "21 Jun",
+  },
+  {
+    "appt-id": "789654",
+    "user-id": "US425",
+    pet: "cat",
+    "vet-name": "Dr. Perera",
+    "vet-id": "VT05",
+    date: "23 Jun",
+  },
+  {
+    "appt-id": "795558",
+    "user-id": "US425",
+    pet: "dog",
+    "vet-name": "Dr. Nirmali",
+    "vet-id": "VT07",
+    date: "23 Jun",
+  },
+  {
+    "appt-id": "795558",
+    "user-id": "US425",
+    pet: "dog",
+    "vet-name": "Dr. Perera",
+    "vet-id": "VT05",
+    date: "26 Jun",
+  },
+];
+
 // tabs for admin panel
 // tabName = the id of the tab button referring to
 function openTab(evt, tabName) {
@@ -77,25 +112,29 @@ function renderOrderList(a) {
   let orderContainer = document.getElementById("order-container");
 
   for (i = 0; i < a; i++) {
-    let statusClass, status;
+    let statusClass, status, iconClass;
     if (lastOrders[i].status == "completed") {
       statusClass = "status-complete";
       status = "Completed";
+      iconClass = "icon-green";
     } else if (lastOrders[i].status == "processing") {
       statusClass = "status-processing";
       status = "Processing";
+      iconClass = "icon-yellow";
     }
 
     orderContainer.innerHTML +=
-      '<div class="order-item">' +
+      '<div class="list-item">' +
       "\n" +
-      '<i class="fa-solid fa-circle-check"></i>' +
+      '<i class="fa-solid fa-circle-check ' +
+      iconClass +
+      '"></i>' +
       "\n" +
       '<p> <span id="item-qty">' +
       lastOrders[i].qty +
-      '</span> x <span id="item-name">' +
+      '</span> x <span class="item-name" id="item-name">' +
       lastOrders[i]["item-name"] +
-      "</span> <span>" +
+      '</span> <span class="item-price">' +
       lastOrders[i]["item-price"] +
       '</span> <span class="' +
       statusClass +
@@ -107,12 +146,34 @@ function renderOrderList(a) {
   }
 }
 
-function setStatus(b) {
-  document.getElementById();
-  if (data[a].status == "completed") {
-    this.classList.add("status-complete");
-  } else if (data[a].status == "processing") {
-    this.classList.add("status-incomplete");
+function renderApptList(b) {
+  let apptContainer = document.getElementById("appt-container");
+  for (i = 0; i < a; i++) {
+    let petIcon, status;
+    if (lastAppts[i].pet == "cat") {
+      petIcon = '<i class="fa-solid fa-cat"></i>';
+    } else if (lastAppts[i].pet == "dog") {
+      petIcon = '<i class="fa-solid fa-dog"></i>';
+    }
+
+    orderContainer.innerHTML +=
+      '<div class="order-item">' +
+      "\n" +
+      petIcon +
+      "\n" +
+      '<p> <span id="item-qty">' +
+      lastOrders[i].qty +
+      '</span> x <span class="item-name" id="item-name">' +
+      lastOrders[i]["item-name"] +
+      "</span> <span>" +
+      lastOrders[i]["item-price"] +
+      '</span> <span class="' +
+      statusClass +
+      '" id="status">' +
+      status +
+      "</span></p>" +
+      "\n" +
+      "</div>";
   }
 }
 
