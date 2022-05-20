@@ -32,7 +32,21 @@ let lastOrders = [
     sku: "800569",
     "item-name": "Dog Shampoo Mini Pack",
     "item-price": "530.00",
+    qty: 3,
+    status: "completed",
+  },
+  {
+    sku: "45879",
+    "item-name": "Cat Food Pedigree",
+    "item-price": "700.00",
     qty: 1,
+    status: "processing",
+  },
+  {
+    sku: "955685",
+    "item-name": "Pet Anti-flea shampoo",
+    "item-price": "2300.00",
+    qty: 2,
     status: "completed",
   },
 ];
@@ -63,14 +77,42 @@ function renderOrderList(a) {
   let orderContainer = document.getElementById("order-container");
 
   for (i = 0; i < a; i++) {
+    let statusClass, status;
+    if (lastOrders[i].status == "completed") {
+      statusClass = "status-complete";
+      status = "Completed";
+    } else if (lastOrders[i].status == "processing") {
+      statusClass = "status-processing";
+      status = "Processing";
+    }
+
     orderContainer.innerHTML +=
       '<div class="order-item">' +
       "\n" +
       '<i class="fa-solid fa-circle-check"></i>' +
       "\n" +
-      '<p> <span id="item-name">Sample Product</span> <span>1,700</span> <span class="status" id="status">Processing</span></p>' +
+      '<p> <span id="item-qty">' +
+      lastOrders[i].qty +
+      '</span> x <span id="item-name">' +
+      lastOrders[i]["item-name"] +
+      "</span> <span>" +
+      lastOrders[i]["item-price"] +
+      '</span> <span class="' +
+      statusClass +
+      '" id="status">' +
+      status +
+      "</span></p>" +
       "\n" +
       "</div>";
+  }
+}
+
+function setStatus(b) {
+  document.getElementById();
+  if (data[a].status == "completed") {
+    this.classList.add("status-complete");
+  } else if (data[a].status == "processing") {
+    this.classList.add("status-incomplete");
   }
 }
 

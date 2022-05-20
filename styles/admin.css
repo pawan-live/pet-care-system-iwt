@@ -165,15 +165,23 @@ main {
   background: linear-gradient(to bottom right, #9796f0, #fbc7d4);
 }
 
+.lists-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .col-left-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  min-width: min-content;
 }
 
 .order-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   box-shadow: 0 4px 14px rgb(216, 216, 216);
   border-radius: 12px;
   margin: 15px 0;
@@ -204,6 +212,7 @@ main {
 
 .order-item > p {
   margin-top: 0;
+  font-size: 1em;
 }
 
 .order-item i {
@@ -212,10 +221,19 @@ main {
   color: #7ce842;
 }
 
-.order-item .status {
+.order-item .status-processing {
   text-transform: uppercase;
   font-size: 0.65em;
   background-color: rgb(252, 197, 0);
   border-radius: 10px;
   padding: 1px 5px;
+  margin-right: 10px;
+}
+.order-item .status-complete {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  background-color: #7ce842;
+  border-radius: 10px;
+  padding: 1px 5px;
+  margin-right: 10px;
 }
