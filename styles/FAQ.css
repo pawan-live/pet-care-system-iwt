@@ -85,6 +85,7 @@ input, textarea {
     box-shadow: 1px 1px 3px rgb(202, 202, 202);
     border: none;
     border-radius: 10px;
+    padding: 10px;
 }
 
 textarea{

@@ -1,3 +1,24 @@
+<?php
+    include 'connect.php';
+    if(isset($_POST['submit'])){
+        $name = $_POST['Name'];
+        $email = $_POST['Email']; 
+        $question = $_POST['Question'];
+
+        $sql = "insert into faq (Name,Email,Question)
+        values('$name','$email','$question')";
+
+        $result = mysqli_query($conn,$sql);
+        if($result){
+            // echo "Data inserted successfully";
+        }else{
+            die(mysqli_error($conn));
+        }
+    }
+   
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,21 +117,21 @@
             </div>
         </div>
         <div class="box">
-            <form action="../php/FAQ.php" method="POST">
+            <form method="POST">
                 <center><h2>Ask Your Question...</h2></center><br><br>
                 <div class="faq-name">
                     <label for="">Name:</label><br>
-                    <input type="text"  name="Name" placeholder="    Enter name..">
+                    <input type="text"  name="Name" placeholder="Enter name..">
                 </div><br>
                 <div class="faq-mail">
                     <label for="">E-mail:</label><br>
-                    <input type="text" name="Email" placeholder="    Enter e-mail">
+                    <input type="text" name="Email" placeholder="Enter e-mail">
                 </div><br>
                 <div class="faq-ques">
                     <label for="">Question:</label><br>
                     <textarea class="txt-area" name="Question"></textarea>
                 </div><br>
-                <button class="btn btn-dark" id="que">send</button>
+                <input type="submit" class="btn btn-dark" id="que" value="Submit" name="submit">
             </form>
         </div>
     </div>
