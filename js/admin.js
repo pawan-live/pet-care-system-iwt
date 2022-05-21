@@ -1,5 +1,5 @@
 // sample data object from database
-let data = [
+let allItems = [
   {
     sku: "152112",
     "item-name": "Dog Food Fast Growth",
@@ -18,6 +18,33 @@ let data = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     tags: ["cat food", "supplement"],
   },
+  {
+    sku: "155365",
+    "item-name": "Cat Food Fast Growth",
+    "item-price": "1250.00",
+    "in-stock": false,
+    "img-url": "../images/shop/6.jpg",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    tags: ["cat food", "supplement"],
+  },
+  {
+    sku: "155365",
+    "item-name": "Cat Food Fast Growth",
+    "item-price": "1250.00",
+    "in-stock": false,
+    "img-url": "../images/shop/6.jpg",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    tags: ["cat food", "supplement"],
+  },
+  {
+    sku: "155365",
+    "item-name": "Cat Food Fast Growth",
+    "item-price": "1250.00",
+    "in-stock": false,
+    "img-url": "../images/shop/6.jpg",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    tags: ["cat food", "supplement"],
+  },
 ];
 
 let lastOrders = [
@@ -26,14 +53,14 @@ let lastOrders = [
     "item-name": "Dog Food Fast Growth",
     "item-price": "1700.00",
     qty: 2,
-    status: "processing",
+    status: "completed",
   },
   {
     sku: "800569",
     "item-name": "Dog Shampoo Mini Pack",
     "item-price": "530.00",
     qty: 3,
-    status: "completed",
+    status: "processing",
   },
   {
     sku: "45879",
@@ -48,6 +75,27 @@ let lastOrders = [
     "item-price": "2300.00",
     qty: 2,
     status: "completed",
+  },
+  {
+    sku: "955685",
+    "item-name": "Pet Anti-flea shampoo",
+    "item-price": "2300.00",
+    qty: 2,
+    status: "processing",
+  },
+  {
+    sku: "955685",
+    "item-name": "Pet Anti-flea shampoo",
+    "item-price": "2300.00",
+    qty: 2,
+    status: "processing",
+  },
+  {
+    sku: "955685",
+    "item-name": "Pet Anti-flea shampoo",
+    "item-price": "2300.00",
+    qty: 2,
+    status: "processing",
   },
 ];
 
@@ -83,6 +131,14 @@ let lastAppts = [
     "vet-name": "Dr. Perera",
     "vet-id": "VT05",
     date: "26 June",
+  },
+  {
+    "appt-id": "588469",
+    "user-id": "US546",
+    pet: "cat",
+    "vet-name": "Dr. Shanuka",
+    "vet-id": "VT08",
+    date: "29 June",
   },
 ];
 
@@ -181,6 +237,12 @@ function renderApptList(b) {
       "\n" +
       "</div>";
   }
+}
+
+function renderAllItems(c) {
+  let allItemsContainer = document.getElementById("all-items-container");
+
+  for (i = 0; i < allItems.length; i++) {}
 }
 
 renderOrderList(lastOrders.length);
