@@ -17,9 +17,9 @@ p {
   flex-direction: column;
 }
 
-.pet-container {
-  /* box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136); */
-}
+/* .pet-container {
+  /* box-shadow: 0 0px 18px rgba(0, 0, 0, 0.136); 
+} */
 
 .details-wrapper {
   display: flex;
