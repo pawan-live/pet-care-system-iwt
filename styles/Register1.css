@@ -13,6 +13,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   background-color: var(--darkblue);
+  justify-content: center;
 }
 
 .form-label{
@@ -20,18 +21,23 @@ body {
     margin: 0px 0px;
 }
 
+.load-wrapper {
+  display: flex;
+  height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: center;
+}
+
 .box {
-  width: 650px;
-  height: 700px;
+  width: 50%;
   background: white;
-  opacity: 1;
-  color: var(--black);
-  top: 60%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   box-sizing: border-box;
   padding: 0px 25px;
+  margin-top: 50px;
   border-radius: 15px;
 }
 
@@ -39,14 +45,14 @@ body {
   color: var(--black);
   text-align: center;
   font-weight: 700;
-  font-size: 3.2em;
+  font-size: 1.8em;
   padding: 20px;
 }
 
 .h3-large {
   color: var(--darkblue);
   font-weight: 600;
-  font-size: 2.4em;
+  font-size: 1.4em;
 }
 
 .box p {
@@ -60,11 +66,11 @@ body {
   margin-bottom: 10px;
 }
 
-.user-details {
+/* .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
 .user-details .input-box input {
   height: 25px;
@@ -73,24 +79,31 @@ body {
 
 .box input[type="password"] {
   border: none;
-  border-bottom: 1px solid var(--black);
   background: transparent;
   outline: none;
   height: 30px;
-  color: var(--black);
+  color: black;
   font-size: 14px;
   padding: 0px 0px;
+  border-radius: 8px;
+  padding-left: 3px;
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
+
 }
 
 .box input[type="text"] {
   border: none;
-  border-bottom: 1px solid var(--black);
   background: transparent;
   outline: none;
   height: 30px;
-  color: var(--black);
+  color: black;
   font-size: 14px;
   padding: 0px 0px;
+  border-radius: 8px;
+  padding-left: 3px;
+  
+  box-shadow: 0 4px 15px rgb(202, 202, 202);
+
 }
 
 #tel-no-container {

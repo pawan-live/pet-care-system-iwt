@@ -131,7 +131,7 @@
                     <label for="">Question:</label><br>
                     <textarea class="txt-area" name="Question"></textarea>
                 </div><br>
-                <input type="submit" class="btn btn-dark" id="que" value="Submit" name="submit">
+                <input type="submit" class="btn btn-dark" id="que" value="Save" name="submit">
             </form>
         </div>
     </div>

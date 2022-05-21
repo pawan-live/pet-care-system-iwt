@@ -79,6 +79,13 @@ h1 {
   }
 }
 
+#que{
+  width: 20%;
+  height: 40%;
+  position: relative;
+  left: 43%;   
+}
+
 input, textarea {
     width: 100%;
     height: 30px;
@@ -104,8 +111,3 @@ textarea{
     box-shadow: 1px 1px 15px rgb(202, 202, 202);
 }
 
-#que{
-    width: 15%;
-    position: relative;
-    left: 43%;
-}
