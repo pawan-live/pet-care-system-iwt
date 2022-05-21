@@ -4,8 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../styles/Register1.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- styles -->
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/Register1.css" />
+    
     <title>Register Form</title>
   </head>
   <body>
@@ -42,8 +59,9 @@
             <!-- <span class="details">First name</span> -->
             <label class="form-label" for="field-first-name">First name</label>
             <input
-              id="field-first-name"
+              id="first-name"
               type="text"
+              name="first_name"
               placeholder="Enter first name.."
               required
             />
@@ -54,6 +72,7 @@
             <input
               id="field-last-name"
               type="text"
+              name="last_name"
               placeholder="Enter last name.."
               required
             />
@@ -65,6 +84,7 @@
         <input
           id="field-email"
           type="text"
+          name="email"
           placeholder="Enter e-mail.."
           required
         />
@@ -87,6 +107,7 @@
         <input
           id="field-confirm-password"
           type="password"
+          name="password"
           placeholder="Re-enter password.."
           required
         />
@@ -99,13 +120,15 @@
             type="text"
             placeholder="Country code"
             value="+94"
+            name="phone"
             required
           />
           <br>
           <input id="tel-no" type="text" placeholder="" required />
         </div>
-        <button class="main-btn">Continue to Add a pet >></button><br>
+        <button class="btn btn-dark"><i style="margin-right: 6px;" class="fa-solid fa-user"></i>Register</button><br>
       </form>
     </div>
+
   </body>
 </html>
