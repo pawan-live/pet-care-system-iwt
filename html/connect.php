@@ -1,14 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "testuser";
-$password = "123456";
+// $servername = "localhost";
+// $username = "user";
+// $password = "123456";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+// // Create connection
+// $con = new mysqli($servername, $username, $password);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+// // Check connection
+// if ($con->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
+// echo "Connected successfully";
+$con = new mysqli('localhost', 'root', '', 'pet_care_system');
+if (!$con) {
+  die(mysqli_error($con));
 }
-echo "Connected successfully";
-?>

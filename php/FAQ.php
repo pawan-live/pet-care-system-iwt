@@ -1,49 +1,42 @@
 <?php
-    include 'connect.php';
-    if(isset($_POST['submit'])){
-        $name = $_POST['Name'];
-        $email = $_POST['Email']; 
-        $question = $_POST['Question'];
+include 'connect.php';
+if (isset($_POST['submit'])) {
+    $name = $_POST['Name'];
+    $email = $_POST['Email'];
+    $question = $_POST['Question'];
 
-        $sql = "insert into faq (Name,Email,Question)
+    $sql = "insert into 'faq' (Name,Email,Question)
         values('$name','$email','$question')";
 
-        $result = mysqli_query($conn,$sql);
-        if($result){
-            // echo "Data inserted successfully";
-        }else{
-            die(mysqli_error($conn));
-        }
+    $result = mysqli_query($con, $sql);
+    if ($result) {
+        // echo "Data inserted successfully";
+    } else {
+        die(mysqli_error($con));
     }
-   
+}
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- google font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
-            rel="stylesheet"
-        />
-        <!-- fontawesome -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>FAQ</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/FAQ.css">
 </head>
+
 <body>
     <!-- navbar -->
     <nav>
@@ -52,12 +45,12 @@
         </div>
         <div class="nav-menu-container">
             <ul class="nav-menu">
-            <li><a class="nav-link active-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">Schedule</a></li>
-            <li><a class="nav-link" href="#">Pet Advice</a></li>
-            <li><a class="nav-link" href="#">Shop</a></li>
-            <li><a class="nav-link" href="#">Help</a></li>
-            <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link active-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Schedule</a></li>
+                <li><a class="nav-link" href="#">Pet Advice</a></li>
+                <li><a class="nav-link" href="#">Shop</a></li>
+                <li><a class="nav-link" href="#">Help</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
             </ul>
         </div>
         <div class="nav-buttons">
@@ -68,7 +61,7 @@
 
     <!-- content -->
     <div class="main-wrapper">
-        <h1>FAQ</h1>   
+        <h1>FAQ</h1>
         <div class="faq">
             <div class="faq-container">
                 <div class="faq-container-header">
@@ -76,7 +69,7 @@
                 </div>
                 <div class="faq-container-body">
                     <div class="faq-container-body-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                </div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                 </div>
             </div>
             <div class="faq-container">
@@ -85,7 +78,7 @@
                 </div>
                 <div class="faq-container-body">
                     <div class="faq-container-body-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                </div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                 </div>
             </div>
             <div class="faq-container">
@@ -94,7 +87,7 @@
                 </div>
                 <div class="faq-container-body">
                     <div class="faq-container-body-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                </div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                 </div>
             </div>
             <div class="faq-container">
@@ -103,7 +96,7 @@
                 </div>
                 <div class="faq-container-body">
                     <div class="faq-container-body-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                </div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                 </div>
             </div>
             <div class="faq-container">
@@ -112,16 +105,18 @@
                 </div>
                 <div class="faq-container-body">
                     <div class="faq-container-body-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                </div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                 </div>
             </div>
         </div>
         <div class="box">
             <form method="POST">
-                <center><h2>Ask Your Question...</h2></center><br><br>
+                <center>
+                    <h2>Ask Your Question...</h2>
+                </center><br><br>
                 <div class="faq-name">
                     <label for="">Name:</label><br>
-                    <input type="text"  name="Name" placeholder="Enter name..">
+                    <input type="text" name="Name" placeholder="Enter name..">
                 </div><br>
                 <div class="faq-mail">
                     <label for="">E-mail:</label><br>
@@ -137,4 +132,5 @@
     </div>
     <script src="../js/FAQ.js"></script>
 </body>
+
 </html>
