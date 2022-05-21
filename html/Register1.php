@@ -68,6 +68,7 @@ if (isset($_POST['register'])) {
   </nav>
 
   <!-- content -->
+  <div class ="load-wrapper">
   <div class="box">
     <h1 class="h1-large">Registration</h1><br>
     <h3 class="h3-large">Owner Info</h3><br>
@@ -117,11 +118,12 @@ if (isset($_POST['register'])) {
         <br>
         <input name="contact_no" id="tel-no" type="text" placeholder="" required />
       </div>
-      <input class="btn btn-dark" type="submit" value="Register" name="register">
+      <center>
+        <input class="btn btn-dark" type="submit" value="Register" name="register">
+      </center>
     </form>
   </div>
-
-
+</div>
 </body>
 
 </html>
