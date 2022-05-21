@@ -44,14 +44,14 @@
 	   </div>
 	   <div class="nav-buttons">
 		 <button id="login-btn" class="btn btn-light">Login</button>
-		 <a href=""></a><button id="reg-btn" class="btn btn-dark">Join Now</button>
+		 <button id="reg-btn" class="btn btn-dark">Join Now</button>
 	   </div>
 	 </nav>
 	 <main>
-	 
+	   
 <div class="main-wrapper">
 <section class="sub-header">
-
+ 
    <div class="search-section">
 	 <form method = "post" action="search.php">
 	 <div class="flex row">
@@ -73,11 +73,11 @@
 	 </div>
 	 <div class="cat">
 	   <img id="img-cat-1" src="http://placehold.jp/40x40.png" alt="" />
-     <a href='shopmore.php? type=dogFood'><p id="cat-1" class="cat-title">Dog Food</p></a>
+     <a href='shopmore.php? type=dogFood'> <p id="cat-1" class="cat-title">Dog Food</p></a>
 	 </div>
 	 <div class="cat">
 	   <img id="img-cat-1" src="http://placehold.jp/40x40.png" alt="" />
-     <a href='shopmore.php? type=Medical'><p id="cat-1" class="cat-title">Medical</p></a>
+     <a href='shopmore.php? type=Medical'> <p id="cat-1" class="cat-title">Medical</p></a>
 	 </div>
    </div>
 		<!-- tags container -->
@@ -100,7 +100,10 @@
    <?php 
          require 'config.php';
 
-         $sql = "select * from petstore";
+         $itemname = $_GET["type"];
+        
+             
+         $sql = "select * from petstore where type like '%$itemname%'";
          
          if($result = $conn->query($sql))
          {

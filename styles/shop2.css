@@ -7,28 +7,29 @@
     min-height: 100vh;
     padding-bottom: 30px;
     
-}
- .alb {
-    width: 200px;
-    height: 200px;
+    
    
 }
-.alb img {
-    width: 60%;
-    height: 100%;
-    margin-bottom: 30px;
+.alb {
+    text-align: center;
+    margin-bottom:30px ;
+    padding-bottom: 45px; 
+    padding-top : 50px;
     
-
-
-} 
-a {
-    text-decoration: none;
-    color: black;
+    
+  
 }
-
-.alb a{
-    padding: 30px;
+.alb h4 {
+   color: rgb(2, 112, 75);
 } 
-.image2{
-    padding-bottom: 3px;
+
+
+.alb h5{
+    text-align:center;
+    
+    padding-top: 12px;
+} 
+.container1{
+    text-align:center;
+    margin-left:50%; 
 }
