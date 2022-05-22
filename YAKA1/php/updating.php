@@ -50,13 +50,17 @@ $conn->close();
 
 <html>
 
-<head></head>
+<head>
+<link rel="stylesheet" type="text/css" href="../styles/style.css" />   
+<link rel="stylesheet" type="text/css" href="../styles/updating.css" />
+</head>
 
 <body>
-    <div class="update">
+<div class="load-wrapper">
+    <div class="box" class="update">
         <center>
-            <h3>update data</h3>
-            <center>
+            <h3 class="h3-large">update data</h3>
+         <center>
                 <div class="formsdesign">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
@@ -69,7 +73,7 @@ $conn->close();
                     </form>
                 </div>
     </div>
-
+    </div>
 </body>
 
 </html>
