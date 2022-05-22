@@ -39,11 +39,12 @@ $user_data = check_login($conn);
     <div class="nav-menu-container">
       <ul class="nav-menu">
         <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="#">Schedule</a></li>
+        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
         <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
-        <li><a class="nav-link" href="#">Shop</a></li>
-        <li><a class="nav-link" href="#">Help</a></li>
-        <li><a class="nav-link" href="#">About</a></li>
+        <li><a class="nav-link" href="shop.php">Shop</a></li>
+        <li><a class="nav-link" href="FAQ.php">Help</a></li>
+        <li><a class="nav-link" href="about_us.php">About</a></li>
+        <li><a class="nav-link" href="contact.php">Contact us</a></li>
       </ul>
     </div>
     <div class="nav-buttons">
@@ -81,7 +82,7 @@ $user_data = check_login($conn);
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="btn-container">
-            <button class="btn btn-dark">Book Now</button>
+           <a href="pet advice.php"><button class="btn btn-dark">Book Now</button></a> 
           </div>
         </div>
       </div>
@@ -99,7 +100,7 @@ $user_data = check_login($conn);
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="btn-container">
-            <button class="btn btn-dark">Shop Now</button>
+           <a href="shop.php"><button class="btn btn-dark">Shop Now</button></a>
           </div>
         </div>
         <div class="img-container">

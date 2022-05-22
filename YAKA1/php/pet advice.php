@@ -52,11 +52,7 @@ if(isset($_SESSION['User'])){
     <div class="sub-header">
        <h3>online pet health advice</h3>
        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-       <div class="search">
-           <form method = "post" action="search.php">
-              <input type="text" placeholder="Search" name="SE">
-              <button type="submit"> <i class="fa fa-search"></i></button> 
-       </form>
+     
       
 
 
@@ -127,7 +123,7 @@ if(isset($_SESSION['User'])){
     <div class="sub-footer">
       <h3>Can't find advise you are looking for?</h3>
       <p>We have proffetional vets for help you</p>
-      <button class="hero-btn">book an appointment</button>
+     <a href="appointment-new.php"><button class="hero-btn">book an appointment</button></a>
 </div>
 </main>
 <footer>

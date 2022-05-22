@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'config.php';
 if (isset($_POST['submit'])) {
     $name = $_POST['Name'];
     $email = $_POST['Email'];
@@ -8,11 +8,11 @@ if (isset($_POST['submit'])) {
     $sql = "insert into 'faq' (Name,Email,Question)
         values('$name','$email','$question')";
 
-    $result = mysqli_query($con, $sql);
+    $result = mysqli_query($conn, $sql);
     if ($result) {
         // echo "Data inserted successfully";
     } else {
-        die(mysqli_error($con));
+        die(mysqli_error($conn));
     }
 }
 

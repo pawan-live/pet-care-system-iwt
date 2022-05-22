@@ -133,45 +133,44 @@
       <div id="tab-content-items" class="tab-content">
         <h3 id="tab-title">All Items</h3>
         <div class="add-item">
-          <form method="post" action="">
-            <div class="form-div">
-              <label class="form-label" for="">Item Name: </label>
-              <input class="form-input-field" type="text" placeholder="Enter item name" name="item_name">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item SKU: </label>
-              <input class="form-input-field" type="text" placeholder="Enter item SKU" name="item_sku">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item Price (LKR)</label>
-              <input class="form-input-field" type="text" placeholder="Enter item price" name="item_price">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Stock</label>
-              <input class="form-input-field" type="text" placeholder="Enter item stock" name="item_stock">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Image URL</label>
-              <input class="form-input-field" type="text" placeholder="Enter image URL" name="item_img">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item tags (use commas)</label>
-              <input class="form-input-field" type="text" placeholder="ex: dog food, cat food" name="item_tags">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item rating</label>
-              <input class="form-input-field" type="text" placeholder="Rating score (ex: 4.5)" name="item_rating">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item reviews</label>
-              <input class="form-input-field" type="text" placeholder="Number of reviews" name="item_reviews">
-            </div>
-            <div class="form-div">
-              <label class="form-label" for="">Item options (use commas)</label>
-              <input class="form-input-field" type="text" placeholder="ex: 1kg, 2kg, 3kg" name="item_options">
-            </div>
-            <button type="submit" name="submit" class="btn btn-dark">Add Item</button>
-          </form>
+        <table border="1" class="table">
+      <tr>
+        <td>photo</td>
+        <td>name</td>
+        <td>price</td>
+        <td>description</td>
+        <td>type</td>
+        <td>update or delete</td>
+
+        <?php
+        //create the database connection
+        include_once("config.php");
+        $sql = "select * from petstore";
+        if ($result = $conn->query($sql)) {
+          if ($result->num_rows > 0) {
+
+
+            while ($row = $result->fetch_assoc()) {
+
+              echo "<tr>";
+              echo "<td>" . $row['photo'] . "</td>";
+              echo "<td>" . $row['name'] . "</td>";
+              echo "<td>" . $row['price'] . "</td>";
+              echo "<td>" . $row['description'] . "</td>";
+              echo "<td>" . $row['type'] . "</td>";
+              echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
+              echo "</tr>";
+            }
+          }
+        } else {
+          echo "no results";
+        }
+
+        $conn->close();
+        ?>
+    </table>
+
+        
         </div>
         <div id="all-items-container" class="list-container">
           <!-- generated from js -->
@@ -233,8 +232,9 @@
         <div id="all-appts-container" class="list-container">
           <div class="list-item">
             <div class="list-left-container">
-              <p>
-                <span class="item-name" id="item-name">
+       
+  
+               <span class="item-name" id="item-name">
                   <a href="#">Dog Food</a>
                 </span>
                 SKU: <span class="item-sku">123456</span>

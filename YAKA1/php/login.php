@@ -61,6 +61,7 @@ if (isset($_POST['submit'])) {
     <div class="nav-logo">
       <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
+
     <div class="nav-menu-container">
       <ul class="nav-menu">
         <li><a class="nav-link active-link" href="#">Home</a></li>

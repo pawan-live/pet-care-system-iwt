@@ -32,10 +32,10 @@
       </div>
       <div class="nav-menu-container">
         <ul class="nav-menu">
-          <li><a class="nav-link active-link" href="#">Home</a></li>
+          <li><a class="nav-link " href="#">Home</a></li>
           <li><a class="nav-link" href="#">Schedule</a></li>
           <li><a class="nav-link" href="#">Pet Advice</a></li>
-          <li><a class="nav-link" href="#">Shop</a></li>
+          <li><a class="nav-link active-link" href="#">Shop</a></li>
           <li><a class="nav-link" href="#">Help</a></li>
           <li><a class="nav-link" href="#">About</a></li>
         </ul>
@@ -66,7 +66,7 @@
                             ?>
                             <main>
       <div class="main-wrapper">
-        <!-- search section -->
+        <!-- search section  -->
         <div class="search-section">
           <div class="flex row">
             <div class="back-btn-container">
@@ -76,7 +76,7 @@
             </div>
             <div class="search-container">
               <i class="icon fa-solid fa-magnifying-glass"></i>
-              <input class="search-bar" type="text" value="Search here" />
+              <input class="search-bar" type="text" value="" />
               <button id="shop-search-btn" class="btn searchbar-btn">
                 Search
               </button>
@@ -87,7 +87,7 @@
             <div class="btn searchbar-tag">Cat Food</div>
             <i class="btn-round fa-solid fa-angle-down"></i>
           </div>
-        </div>
+        </div> 
 
         <!-- item section -->
         <div class="item-section">
@@ -148,13 +148,7 @@
               <p class="in-stock"><span id="item-stock">10</span>+ in stock</p>
             </div>
 
-            <!-- size -->
-            <div class="size-container">
-              <p>Size:</p>
-              <div id="option-1" class="select-option active">1kg</div>
-              <div id="option-2" class="select-option">2kg</div>
-              <div id="option-3" class="select-option">3kg</div>
-            </div>
+           
 
             <!-- price -->
             <div class="price-container">
@@ -163,12 +157,8 @@
 
             <!-- buy now buttons -->
             <div class="btn-container">
-              <button id="add-to-cart" class="btn btn-dark add-to-cart">
-                Add to Cart
-              </button>
-              <button id="buy-now" class="btn btn-light buy-now">
-                Buy Now
-              </button>
+              
+              <a href="checkout.php"><button id="buy-now" class="btn btn-light buy-now">Buy Now</button></a>
             </div>
 
             <div class="divider"></div>
@@ -220,12 +210,9 @@
 
           <!-- item description -->
           <div id="tab-content-desc" class="tab-content">
-            <h3 id="item-desc-title">Club 4 Paws Dog Food</h3>
+            <h3 id="item-desc-title"><?php echo $row["name"];?></h3>
             <p id="item-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            <?php echo $row["description"]?>;
             </p>
           </div>
 
@@ -234,10 +221,7 @@
           <div id="tab-content-specs" class="tab-content">
             <h3>Specifications</h3>
             <p id="item-specs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+           
             </p>
           </div>
 
@@ -292,11 +276,7 @@
                      
                               
                               
-                             
-                              echo $row["description"];
-                          
-
-                          }
+                       }
                           
                       }
                   }
