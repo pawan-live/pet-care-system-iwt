@@ -49,7 +49,7 @@
     <!-- Login -->
     <div class="loginbox">
       <h1 class="h1-large">Login Here</h1>
-      <form method="POST">
+      <form method="POST" action = "session.php">
         <p>E-mail</p>
         <input type="text" name="user-name" placeholder="Enter e-mail.." required />
         <p>Password</p>
