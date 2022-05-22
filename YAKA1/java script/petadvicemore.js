@@ -41,18 +41,18 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
+    const modal= document.querySelector(button.dataset.modalTarget)
     openModal(modal)
   })
 })
 
 overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
+  const modal = document.querySelectorAll('.modalactive')
+  modal.forEach(modal => {
     closeModal(modal)
   })
 })
-
+//this popup function is referenced by youtube. link = https://www.youtube.com/watch?v=MBaw_6cPmAw
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
@@ -61,7 +61,7 @@ closeModalButtons.forEach(button => {
 })
 
 function openModal(modal) {
-  if (modal == null) return
+  if (modal== null) return
   modal.classList.add('active')
   overlay.classList.add('active')
 }
