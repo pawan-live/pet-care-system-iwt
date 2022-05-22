@@ -5,7 +5,7 @@ session_start();
 include("config.php");
 include("functions.php");
 
-$user_data = check_login($conn);
+// $user_data = check_login($conn);
 
 ?>
 
@@ -71,23 +71,31 @@ $user_data = check_login($conn);
 
   <div class="main">
 
+    <!-- navbar -->
     <nav>
       <div class="nav-logo">
         <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
       </div>
       <div class="nav-menu-container">
         <ul class="nav-menu">
-          <li><a class="nav-link " href="#">Home</a></li>
-          <li><a class="nav-link" href="#">Schedule</a></li>
-          <li><a class="nav-link" href="#">Pet Advice</a></li>
-          <li><a class="nav-link active-link" href="#">Shop</a></li>
-          <li><a class="nav-link" href="#">Help</a></li>
-          <li><a class="nav-link" href="#">About</a></li>
+          <li><a class="nav-link active-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+          <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
+          <li><a class="nav-link" href="shop.php">Shop</a></li>
+          <li><a class="nav-link" href="FAQ.php">Help</a></li>
+          <li><a class="nav-link" href="about_us.php">About</a></li>
+          <li><a class="nav-link" href="contact.php">Contact us</a></li>
         </ul>
       </div>
+
       <div class="nav-buttons">
-        <button id="login-btn" class="btn btn-light">Login</button>
-        <a href=""></a><button id="reg-btn" class="btn btn-dark">Join Now</button>
+        <?php
+        if (check_login_no_redirect($conn)) {
+          echo '<a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>';
+        } else {
+          echo '<a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a><a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>';
+        }
+        ?>
       </div>
     </nav>
     <main>

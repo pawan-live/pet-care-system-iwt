@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+include("config.php");
+include("functions.php");
+
+?>
+
+<?php
 include_once "config.php";
 
 if (isset($_POST['btnSubmit'])) {

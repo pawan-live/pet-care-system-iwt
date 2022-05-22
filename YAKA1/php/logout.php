@@ -1,13 +1,9 @@
 <?php
- session_start();
 
- if(isset($_SESSION['User'])){
-     session_destroy();
+session_start();
 
-     header("Location:home1.php");
- }
+if (isset($_SESSION['email'])) {
+    unset($_SESSION['email']);
+}
 
-
-
-
-?>
+header("Location: login.php");

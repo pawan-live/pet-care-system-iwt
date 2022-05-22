@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+include("config.php");
+include("functions.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,8 +44,13 @@
       </ul>
     </div>
     <div class="nav-buttons">
-      <button id="login-btn" class="btn">Logout</button>
-      <!-- <button id="reg-btn" class="btn btn-dark">Join Now</button> -->
+      <?php
+      if (check_login_no_redirect($conn)) {
+        echo '<a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>';
+      } else {
+        echo '<a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a><a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>';
+      }
+      ?>
     </div>
   </nav>
 
@@ -133,44 +147,44 @@
       <div id="tab-content-items" class="tab-content">
         <h3 id="tab-title">All Items</h3>
         <div class="add-item">
-        <table border="1" class="table">
-      <tr>
-        <td>photo</td>
-        <td>name</td>
-        <td>price</td>
-        <td>description</td>
-        <td>type</td>
-        <td>update or delete</td>
+          <table border="1" class="table">
+            <tr>
+              <td>photo</td>
+              <td>name</td>
+              <td>price</td>
+              <td>description</td>
+              <td>type</td>
+              <td>update or delete</td>
 
-        <?php
-        //create the database connection
-        include_once("config.php");
-        $sql = "select * from petstore";
-        if ($result = $conn->query($sql)) {
-          if ($result->num_rows > 0) {
+              <?php
+              //create the database connection
+              include_once("config.php");
+              $sql = "select * from petstore";
+              if ($result = $conn->query($sql)) {
+                if ($result->num_rows > 0) {
 
 
-            while ($row = $result->fetch_assoc()) {
+                  while ($row = $result->fetch_assoc()) {
 
-              echo "<tr>";
-              echo "<td>" . $row['photo'] . "</td>";
-              echo "<td>" . $row['name'] . "</td>";
-              echo "<td>" . $row['price'] . "</td>";
-              echo "<td>" . $row['description'] . "</td>";
-              echo "<td>" . $row['type'] . "</td>";
-              echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
-              echo "</tr>";
-            }
-          }
-        } else {
-          echo "no results";
-        }
+                    echo "<tr>";
+                    echo "<td>" . $row['photo'] . "</td>";
+                    echo "<td>" . $row['name'] . "</td>";
+                    echo "<td>" . $row['price'] . "</td>";
+                    echo "<td>" . $row['description'] . "</td>";
+                    echo "<td>" . $row['type'] . "</td>";
+                    echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
+                    echo "</tr>";
+                  }
+                }
+              } else {
+                echo "no results";
+              }
 
-        $conn->close();
-        ?>
-    </table>
+              $conn->close();
+              ?>
+          </table>
 
-        
+
         </div>
         <div id="all-items-container" class="list-container">
           <!-- generated from js -->
@@ -232,12 +246,12 @@
         <div id="all-appts-container" class="list-container">
           <div class="list-item">
             <div class="list-left-container">
-       
-  
-               <span class="item-name" id="item-name">
-                  <a href="#">Dog Food</a>
-                </span>
-                SKU: <span class="item-sku">123456</span>
+
+
+              <span class="item-name" id="item-name">
+                <a href="#">Dog Food</a>
+              </span>
+              SKU: <span class="item-sku">123456</span>
               </p>
             </div>
             <div class="list-right-container">

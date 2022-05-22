@@ -1,31 +1,9 @@
 <?php
 
-
-
 session_start();
 
 include("config.php");
 include("functions.php");
-
-
-
-if (isset($_POST['register'])) {
-  $pet_name = $_POST['pet_name'];
-  $pet_type = $_POST['pet_type'];
-  $pet_breed = $_POST['pet_breed'];
-  $age = $_POST['age'];
-  $pet_gender = $_POST['pet_gender'];
-
-  $sql = "insert into petdetails (pet_name,pet_type,pet_breed,age,pet_gender)
-  values('$pet_name', '$pet_type', '$pet_breed', '$age', '$pet_gender')";
-
-  if ($conn->query($sql)) {
-    echo "Your message sent succesefully";
-  } else {
-    echo "error" . $conn->error;
-  }
-  $conn->close();
-}
 
 ?>
 
@@ -45,8 +23,8 @@ if (isset($_POST['register'])) {
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/appointment-new.css" />
-  <title>Register Your Pet | BawBaw.lk</title>
+  <link rel="stylesheet" href="../styles/mypets.css" />
+  <title>Page | BawBaw.lk</title>
 </head>
 
 <body>
@@ -79,50 +57,65 @@ if (isset($_POST['register'])) {
   </nav>
   <main>
     <div class="main-wrapper">
+      <h1 class="page-title">My Pets</h1>
+      <div class="pet-container">
+        <div class="column-left">
+          <div class="details-wrapper">
+            <div class="img-container">
+              <img class="pet-img" src="http://placehold.jp/180x180.png" alt="" />
+            </div>
+            <div class="name-container">
+              <p class="pet-name">Scooby</p>
+              <i class="fa-solid fa-dog"></i>
+              <i class="fa-solid fa-cat" style="display: none"></i>
+            </div>
+            <div class="breed-container">
+              <p class="pet-breed">Dalmation</p>
+              <p class="pet-age">, <span id="pet-age">2</span> yrs</p>
+            </div>
+            <div class="gender-container">
+              <p class="pet-gender">Male</p>
+              <i id="icon-male" class="fa-solid fa-mars"></i>
+              <i id="icon-male" class="fa-solid fa-venus" style="display: none"></i>
+            </div>
+            <i id="edit-icon" class="icon fa-solid fa-pencil"></i>
+          </div>
+        </div>
 
-      <div class="form-container">
-
-        <h2>Register Your Pet</h2>
-        <!-- form -->
-        <form method="post">
-          <!-- pet name -->
-          <div class="form-div">
-            <label class="form-label" for="pet-name">Pet's name: </label>
-            <input id="pet-name" class="form-input-field" type="text" name="pet_name" placeholder="Enter your pet's name" />
+        <div class="column-right">
+          <div class="item-group">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span> Upcoming Appointments</span>
           </div>
-          <!-- pet type -->
-          <div class="form-div">
-            <label class="form-label" for="pet-type">Pet type: </label>
-            <select class="form-select" name="pet_type" id="pet-type">
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-
-              <option value="other">Other</option>
-            </select>
+          <div class="appt-container">
+            <div class="appt-group">
+              <p>
+                <span id="date">22/08/2022</span>
+                <span id="time">6:00 PM</span>
+              </p>
+              <i class="icon fa-solid fa-pencil"></i>
+            </div>
           </div>
-          <!-- pet breed -->
-          <div class="form-div">
-            <label class="form-label" for="pet-breed">Pet's breed: </label>
-            <input id="pet-breed" class="form-input-field" type="text" name="pet_breed" placeholder="ex: Rottweiler" />
+          <div class="appt-container">
+            <div class="appt-group">
+              <p>
+                <span id="date">22/08/2022</span>
+                <span id="time">6:00 PM</span>
+              </p>
+              <i class="icon fa-solid fa-pencil"></i>
+            </div>
           </div>
-          <!-- age -->
-          <div class="form-div">
-            <label class="form-label" for="age">Pet's age: </label>
-            <input id="age" class="form-input-field" type="text" name="age" placeholder="Age of your pet in years" />
+          <div class="appt-container">
+            <div class="appt-group">
+              <p>
+                <span id="date">22/08/2022</span>
+                <span id="time">6:00 PM</span>
+              </p>
+              <i class="icon fa-solid fa-pencil"></i>
+            </div>
           </div>
-          <!-- pet gender -->
-          <div class="form-div">
-            <label class="form-label" for="pet-gender">Pet gender: </label>
-            <select class="form-select" name="pet_gender" id="pet-gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-
-          <input class="btn btn-dark" type="submit" value="Add Pet" name="register">
-        </form>
+        </div>
       </div>
-
     </div>
   </main>
 

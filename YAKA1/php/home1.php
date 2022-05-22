@@ -5,8 +5,6 @@ session_start();
 include("config.php");
 include("functions.php");
 
-$user_data = check_login($conn);
-
 ?>
 
 
@@ -47,9 +45,15 @@ $user_data = check_login($conn);
         <li><a class="nav-link" href="contact.php">Contact us</a></li>
       </ul>
     </div>
+
     <div class="nav-buttons">
-      <a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a>
-      <a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>
+      <?php
+      if (check_login_no_redirect($conn)) {
+        echo '<a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>';
+      } else {
+        echo '<a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a><a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>';
+      }
+      ?>
     </div>
   </nav>
 
@@ -82,7 +86,7 @@ $user_data = check_login($conn);
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="btn-container">
-           <a href="pet advice.php"><button class="btn btn-dark">Book Now</button></a> 
+            <a href="pet advice.php"><button class="btn btn-dark">Book Now</button></a>
           </div>
         </div>
       </div>
@@ -100,7 +104,7 @@ $user_data = check_login($conn);
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="btn-container">
-           <a href="shop.php"><button class="btn btn-dark">Shop Now</button></a>
+            <a href="shop.php"><button class="btn btn-dark">Shop Now</button></a>
           </div>
         </div>
         <div class="img-container">

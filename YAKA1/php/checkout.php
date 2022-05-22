@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+include("config.php");
+include("functions.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,20 +36,25 @@
     <div class="nav-menu-container">
       <ul class="nav-menu">
         <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="#">Schedule</a></li>
-        <li><a class="nav-link" href="#">Pet Advice</a></li>
-        <li><a class="nav-link" href="#">Shop</a></li>
-        <li><a class="nav-link" href="#">Help</a></li>
-        <li><a class="nav-link" href="#">About</a></li>
+        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+        <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
+        <li><a class="nav-link" href="shop.php">Shop</a></li>
+        <li><a class="nav-link" href="FAQ.php">Help</a></li>
+        <li><a class="nav-link" href="about_us.php">About</a></li>
+        <li><a class="nav-link" href="contact.php">Contact us</a></li>
       </ul>
     </div>
-    <div class="nav-buttons">
-      <button id="login-btn" class="btn btn-light">Login</button>
-      <button id="reg-btn" class="btn btn-dark">Join Now</button>
-    </div>
-  </nav>
 
-  <!-- content -->
+    <div class="nav-buttons">
+      <?php
+      if (check_login_no_redirect($conn)) {
+        echo '<a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>';
+      } else {
+        echo '<a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a><a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>';
+      }
+      ?>
+    </div>
+  </nav> <!-- content -->
   <main>
     <div class="main-wrapper">
       <div class="col-left">
@@ -98,7 +112,7 @@
           <input type="checkbox" name="pay" id="checkbox">
           <label for="" id="check-lbl"> Save this Payment </label><br>
         </div>
-        <a href="../html/checkoutEnd.php">
+        <a href="checkoutEnd.php">
           <button class="btn btn-dark">Pay Now</button>
         </a>
       </div>
