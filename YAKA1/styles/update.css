@@ -1,27 +1,26 @@
-.dataInsert{
+.dataInsert {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
 }
-.dataInsert h3{
-    padding: 20px;
-    text-align: center;
+.dataInsert h3 {
+  padding: 20px;
+  text-align: center;
 }
-.formsdesign{
+.formsdesign {
   width: 50%;
   margin: auto;
   padding: 20px 15px;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
 }
-.update{
+.update {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
 }
-.update h3{
+.update h3 {
   padding: 20px;
   text-align: center;
-
 }

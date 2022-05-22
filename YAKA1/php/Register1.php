@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include 'config.php';
 
 if (isset($_POST['register'])) {
@@ -13,17 +15,15 @@ if (isset($_POST['register'])) {
   $sql = "insert into user (first_name,last_name,gender,email,password, contact_no)
     values('$first_name', '$last_name', '$gender', '$email', '$pass','$phone')";
 
-    if($conn->query($sql))
-    {
-        echo "Your message sent succesefully";
-    }
-    else{
-        echo "error".$conn->error;
-    }
-    $conn->close();
-    
+  if ($conn->query($sql)) {
+    // echo "Your message sent succesefully";
+  } else {
+    echo "error" . $conn->error;
+  }
+  $conn->close();
 
- 
+  header("Location: login.php");
+  die;
 }
 ?>
 
@@ -70,62 +70,62 @@ if (isset($_POST['register'])) {
   </nav>
 
   <!-- content -->
-  <div class ="load-wrapper">
-  <div class="box">
-    <h1 class="h1-large">Registration</h1><br>
-    <h3 class="h3-large">Owner Info</h3><br>
-    <form method="POST">
-      <p>Enter your details</p><br>
-      <div class="user-details">
-        <div class="input-box">
-          <!-- <span class="details">First name</span> -->
-          <label class="form-label" for="field-first-name">First name</label>
-          <input id="first-name" type="text" name="first_name" placeholder="Enter first name.." required />
+  <div class="load-wrapper">
+    <div class="box">
+      <h1 class="h1-large">Registration</h1><br>
+      <h3 class="h3-large">Owner Info</h3><br>
+      <form method="POST">
+        <p>Enter your details</p><br>
+        <div class="user-details">
+          <div class="input-box">
+            <!-- <span class="details">First name</span> -->
+            <label class="form-label" for="field-first-name">First name</label>
+            <input id="first-name" type="text" name="first_name" placeholder="Enter first name.." required />
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Last name</span> -->
+            <label class="form-label" for="field-last-name">Last name</label>
+            <input id="field-last-name" type="text" name="last_name" placeholder="Enter last name.." required />
+          </div>
         </div>
-        <div class="input-box">
-          <!-- <span class="details">Last name</span> -->
-          <label class="form-label" for="field-last-name">Last name</label>
-          <input id="field-last-name" type="text" name="last_name" placeholder="Enter last name.." required />
+        <Br>
+        <!-- pet gender -->
+        <div class="form-div">
+          <label class="form-label" for="gender">Gender: </label>
+          <select class="form-select" name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
-      </div>
-      <Br>
-      <!-- pet gender -->
-      <div class="form-div">
-        <label class="form-label" for="gender">Gender: </label>
-        <select class="form-select" name="gender" id="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-      </div>
-      <!-- <p>E-mail</p> -->
-      <label class="form-label" for="field-email">E-mail</label><br>
-      <input id="field-email" type="text" name="email" placeholder="Enter e-mail.." required />
-      <br><br>
-      <!-- <p>Enter Password</p> -->
-      <label class="form-label" for="field-enter-password">Enter Password</label><br>
-      <input id="field-enter-password" type="password" placeholder="Enter password.." required /><br>
-      <ul>
-        <li>Must be at least 6 characters</li>
-        <li>Contains letters,numbers & symbols</li>
-      </ul>
-      </br>
-      <!-- <p>Confirm Password</p> -->
-      <label class="form-label" for="field-confirm-password">Confirm Password</label><br>
-      <input id="field-confirm-password" type="password" name="password" placeholder="Re-enter password.." required />
-      <br><br>
-      <!-- <p>Contact Number</p> -->
-      <label class="form-label" for="tel-no">Contact Number</label><br>
-      <div id="tel-no-container">
-        <input id="country-code" type="text" placeholder="Country code" value="+94" required />
-        <br>
-        <input name="contact_no" id="tel-no" type="text" placeholder="" required />
-      </div>
-      <center>
-        <input class="btn btn-dark" type="submit" value="Register" name="register">
-      </center>
-    </form>
+        <!-- <p>E-mail</p> -->
+        <label class="form-label" for="field-email">E-mail</label><br>
+        <input id="field-email" type="text" name="email" placeholder="Enter e-mail.." required />
+        <br><br>
+        <!-- <p>Enter Password</p> -->
+        <label class="form-label" for="field-enter-password">Enter Password</label><br>
+        <input id="field-enter-password" type="password" placeholder="Enter password.." required /><br>
+        <ul>
+          <li>Must be at least 6 characters</li>
+          <li>Contains letters,numbers & symbols</li>
+        </ul>
+        </br>
+        <!-- <p>Confirm Password</p> -->
+        <label class="form-label" for="field-confirm-password">Confirm Password</label><br>
+        <input id="field-confirm-password" type="password" name="password" placeholder="Re-enter password.." required />
+        <br><br>
+        <!-- <p>Contact Number</p> -->
+        <label class="form-label" for="tel-no">Contact Number</label><br>
+        <div id="tel-no-container">
+          <input id="country-code" type="text" placeholder="Country code" value="+94" required />
+          <br>
+          <input name="contact_no" id="tel-no" type="text" placeholder="" required />
+        </div>
+        <center>
+          <input class="btn btn-dark" type="submit" value="Register" name="register">
+        </center>
+      </form>
+    </div>
   </div>
-</div>
 </body>
 
 </html>
