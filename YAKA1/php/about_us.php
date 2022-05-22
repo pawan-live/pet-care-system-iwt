@@ -22,7 +22,7 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/mypets.css" />
+    <link rel="stylesheet" href="../styles/about_us.css">
     <title>Page | BawBaw.lk</title>
   </head>
   <body>
@@ -46,81 +46,79 @@
         <button id="reg-btn" class="btn btn-dark">Join Now</button>
       </div>
     </nav>
+    <div>
+        <div class="back"> 
+            <h1 class="head1">
+               We Care for Your Pet
+          </h1>
+       </div>
+    </div>
 
-    <main>
-      <div class="main-wrapper">
-        <h1 class="page-title">My Pets</h1>
-        <div class="pet-container">
-          <div class="column-left">
-            <div class="details-wrapper">
-              <div class="img-container">
-                <img
-                  class="pet-img"
-                  src="http://placehold.jp/180x180.png"
-                  alt=""
-                />
-              </div>
-              <div class="name-container">
-                <p class="pet-name">Scooby</p>
-                <i class="fa-solid fa-dog"></i>
-                <i class="fa-solid fa-cat" style="display: none"></i>
-              </div>
-              <div class="breed-container">
-                <p class="pet-breed">Dalmation</p>
-                <p class="pet-age">, <span id="pet-age">2</span> yrs</p>
-              </div>
-              <div class="gender-container">
-                <p class="pet-gender">Male</p>
-                <i id="icon-male" class="fa-solid fa-mars"></i>
-                <i
-                  id="icon-male"
-                  class="fa-solid fa-venus"
-                  style="display: none"
-                ></i>
-              </div>
-              <i id="edit-icon" class="icon fa-solid fa-pencil"></i>
-            </div>
-          </div>
-
-          <div class="column-right">
-            <div class="item-group">
-              <i class="fa-solid fa-calendar-days"></i>
-              <span> Upcoming Appointments</span>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-          </div>
+    <div class="position_1">
+        <div class="pic">
+          <img src="../images/About_us/Vet.jpg" alt="a pet" width="480" height="300">
         </div>
+        <div class="position_2">
+        <h2 class="header2">WHO WE ARE</h2>
+        <p class="para">
+          "Lorem ipsum dolor sit amet,<br>
+           consectetur adipiscing elit, <br>
+           sed do eiusmod tempor incididunt <br>
+           ut labore et dolore magna aliqua. <br>
+           Ut enim ad minim veniam, <br>
+           quis nostrud exercitation ullamco <br> 
+           laboris nisi <br>
+           Lorem ipsum dolor sit amet,<br>
+           Lorem ipsum dolor sit amet,<br>
+           consectetur adipiscing elit,<br>
+           sed do eiusmod tempor incididunt <br>
+           ut labore et dolore magna aliqua. <br>
+           Ut enim ad minim veniam,
+        </p>
       </div>
-    </main>
+    </div>
+    <div class="rec0">
+        <div class="rec1">
+           <h2 style="position: absolute; text-align: center; top: 80px; left: 25%;">2000+</h2> 
+           <p  style="position: absolute; text-align: center; top: 130px; left: 10%;">Vet Consultations</p>
+        </div>
+        
+        <div class="rec2">
+          <h2 style="position: absolute; text-align: center; top: 80px; left: 40%;">30</h2> 
+          <p  style="position: absolute; text-align: center; top: 130px; left: 4%;">Qualified Vet Surgeons</p>
+        </div>
+
+       <div class="rec3">
+          <h2 style="position: absolute; text-align: center; top: 80px; left: 40%;">98%</h2> 
+          <p  style="position: absolute; text-align: center; top: 130px; left: 17%;">Positive Ratings</p> 
+        </div>
+</div>
+<div class="pic2">
+    <img src="../images/About_us/vet_2.jpg" alt="a pet" width="450" height="300">
+  </div>
+  <div class="position_4">
+  <h2 class="h2-1">OUR HISTORY</h2>
+  <p class="para-1">
+    "Lorem ipsum dolor sit amet,<br>
+     consectetur adipiscing elit, <br>
+     sed do eiusmod tempor incididunt <br>
+     ut labore et dolore magna aliqua. <br>
+     Ut enim ad minim veniam, <br>
+     quis nostrud exercitation ullamco <br> 
+     laboris nisi <br>
+     Lorem ipsum dolor sit amet,<br>
+     Lorem ipsum dolor sit amet,<br>
+     consectetur adipiscing elit,<br>
+     sed do eiusmod tempor incididunt <br>
+     ut labore et dolore magna aliqua. <br>
+     Ut enim ad minim veniam,
+  </p>
+</div>
+
+
 
     <!-- footer -->
-    <footer>
+    <footer class="footer_position">
       <div class="footer-container">
         <div id="footer-sec-1" class="footer-img-container">
           <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
@@ -184,5 +182,6 @@
       </div>
       <div class="footer-text">Copyright 2022 Group 09 | Flying Monkeys</div>
     </footer>
+
   </body>
 </html>

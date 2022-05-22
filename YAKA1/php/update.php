@@ -19,11 +19,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- stylesheets -->
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/mypets.css" />
-    <title>Page | BawBaw.lk</title>
+    <link rel ="stylesheet" href = "../styles/update.css">
+  
+    <title>Item Page</title>
   </head>
   <body>
     <!-- navbar -->
@@ -46,80 +46,69 @@
         <button id="reg-btn" class="btn btn-dark">Join Now</button>
       </div>
     </nav>
+ <main>    
+<div class="dataInsert">
+    <h3>insert data</h3>
+    <div class="formsdesign">
+    <form method = "post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    
+            enter the product name : <input type="text" name = "name1" class = "name"> <br>
+            input the directory of the image  <input type = "type" name = "image" class = "imagedirec" multiple> <br>
+            enter the price of the product : <input type="text" name = "PR" class = "price"><br>
+            enter the description of thee product : <textarea name="des" id="" cols="30" rows="10" class = "description"></textarea><br>
+            enter the type of the product : <input type="text" name = 'type'><br>
+            <input type="submit" name = "btnSubmit">
+    </form>
+    </div>
+</div>
 
-    <main>
-      <div class="main-wrapper">
-        <h1 class="page-title">My Pets</h1>
-        <div class="pet-container">
-          <div class="column-left">
-            <div class="details-wrapper">
-              <div class="img-container">
-                <img
-                  class="pet-img"
-                  src="http://placehold.jp/180x180.png"
-                  alt=""
-                />
-              </div>
-              <div class="name-container">
-                <p class="pet-name">Scooby</p>
-                <i class="fa-solid fa-dog"></i>
-                <i class="fa-solid fa-cat" style="display: none"></i>
-              </div>
-              <div class="breed-container">
-                <p class="pet-breed">Dalmation</p>
-                <p class="pet-age">, <span id="pet-age">2</span> yrs</p>
-              </div>
-              <div class="gender-container">
-                <p class="pet-gender">Male</p>
-                <i id="icon-male" class="fa-solid fa-mars"></i>
-                <i
-                  id="icon-male"
-                  class="fa-solid fa-venus"
-                  style="display: none"
-                ></i>
-              </div>
-              <i id="edit-icon" class="icon fa-solid fa-pencil"></i>
-            </div>
-          </div>
+  <hr>
+  <h3>update and delete data in database </h3>
+  <table  border="1" class = "table">
+    <tr>
+      <td>photo</td>  
+      <td>name</td>  
+      <td>price</td>  
+      <td>description</td>
+      <td>type</td>
+      <td>update or delete</td>
 
-          <div class="column-right">
-            <div class="item-group">
-              <i class="fa-solid fa-calendar-days"></i>
-              <span> Upcoming Appointments</span>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+  <?php
+     //create the database connection
+      include_once("config.php");
+      $sql = "select * from petstore";
+      if($result = $conn->query($sql))
+      {
+          if($result->num_rows > 0)
+          {
+         
+             
+        while ($row=$result->fetch_assoc()) { 
 
-    <!-- footer -->
+          echo "<tr>";
+          echo "<td>".$row['photo']."</td>";
+          echo "<td>".$row['name']."</td>";
+          echo "<td>".$row['price']."</td>";
+          echo "<td>".$row['description']."</td>";
+          echo "<td>".$row['type']."</td>";
+          echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
+          echo "</tr>";
+
+        
+}
+    }
+    }
+    
+    else{
+        echo "no results";
+    }
+    
+    $conn->close();
+?>
+  </table>
+  
+  </main>
+   <!-- footer -->
     <footer>
       <div class="footer-container">
         <div id="footer-sec-1" class="footer-img-container">
@@ -184,5 +173,35 @@
       </div>
       <div class="footer-text">Copyright 2022 Group 09 | Flying Monkeys</div>
     </footer>
+    
   </body>
 </html>
+<!-- upload the data to the database php part -->
+<?php
+       
+
+       // include database connection file
+       require_once("config.php");
+
+       if(isset($_POST["btnSubmit"]))
+       {
+
+          $name = $_POST['name1'];
+      
+          $price = $_POST['PR'];
+          $description = $_POST['des'];
+
+
+ $sql = "INSERT INTO newpet (photo,name,price,description) VALUES('$fileName','$name','$price','$description')";
+      
+       if($conn->query($sql))
+      {
+          echo "You added the data succesefully";
+      }
+      else{
+          echo "error".$conn->error;
+      }
+      $conn->close();
+  }
+
+      ?>

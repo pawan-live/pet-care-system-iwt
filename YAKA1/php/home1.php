@@ -22,8 +22,8 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/mypets.css" />
-    <title>Page | BawBaw.lk</title>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <title>Home | BawBaw.lk</title>
   </head>
   <body>
     <!-- navbar -->
@@ -47,77 +47,26 @@
       </div>
     </nav>
 
-    <main>
-      <div class="main-wrapper">
-        <h1 class="page-title">My Pets</h1>
-        <div class="pet-container">
-          <div class="column-left">
-            <div class="details-wrapper">
-              <div class="img-container">
-                <img
-                  class="pet-img"
-                  src="http://placehold.jp/180x180.png"
-                  alt=""
-                />
-              </div>
-              <div class="name-container">
-                <p class="pet-name">Scooby</p>
-                <i class="fa-solid fa-dog"></i>
-                <i class="fa-solid fa-cat" style="display: none"></i>
-              </div>
-              <div class="breed-container">
-                <p class="pet-breed">Dalmation</p>
-                <p class="pet-age">, <span id="pet-age">2</span> yrs</p>
-              </div>
-              <div class="gender-container">
-                <p class="pet-gender">Male</p>
-                <i id="icon-male" class="fa-solid fa-mars"></i>
-                <i
-                  id="icon-male"
-                  class="fa-solid fa-venus"
-                  style="display: none"
-                ></i>
-              </div>
-              <i id="edit-icon" class="icon fa-solid fa-pencil"></i>
-            </div>
-          </div>
-
-          <div class="column-right">
-            <div class="item-group">
-              <i class="fa-solid fa-calendar-days"></i>
-              <span> Upcoming Appointments</span>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-            <div class="appt-container">
-              <div class="appt-group">
-                <p>
-                  <span id="date">22/08/2022</span>
-                  <span id="time">6:00 PM</span>
-                </p>
-                <i class="icon fa-solid fa-pencil"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- hero section -->
+    <section class="hero-section">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1 class="title">Give the Best for your Pet</h1>
+        <p class="subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button class="btn btn-dark">Get Started</button>
       </div>
-    </main>
+      <!-- <div class="main-wrapper"></div> -->
+    </section>
+    <!-- 
+    <h1 class="title">Give the Best for your Pet</h1>
+    <p class="subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <button class="btn btn-dark">Get Started</button> -->
 
     <!-- footer -->
     <footer>

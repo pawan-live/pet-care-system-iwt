@@ -1,0 +1,38 @@
+.form-div {
+  margin-top: 15px;
+}
+
+.form-input-field,
+.form-select {
+  margin-top: 8px;
+  padding-left: 6px;
+  width: 100%;
+}
+
+#schedule {
+  margin-top: 10px;
+}
+
+#schedule > i {
+  margin-right: 5px;
+}
+
+.main-wrapper {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  box-shadow: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 25px 25px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 15px rgb(202, 202, 202);
+}

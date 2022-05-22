@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* align-items: center; */
+}
+
+.main-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 1000px;
+    min-width: 750px;
+    padding: 0 50px;
+    position: absolute;
+    left: 18%; 
+    background-color: white;
+    box-shadow: 0 0px 18px rgb(0 0 0 / 14%);
+}
+
+h1 {
+  text-align: center;
+  margin: 32px 0;
+  font-size: 40px;
+}
+
+.faq {
+  width: 90%;
+  max-width: 1000px;
+  margin: 32px auto;
+}
+
+.faq-container {
+  background-color: #fff;
+  color: #111;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+
+.faq-container-header {
+  padding: 8px 48px 8px 16px;
+  min-height: 56px;
+  line-height: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.faq-container-header::after {
+  content: "\002B";
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+}
+.faq-container-header.active::after {
+  content: "\2212";
+}
+.faq-container-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.faq-container-body-content {
+  padding: 16px;
+  line-height: 24px;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+#que{
+  width: 20%;
+  height: 40%;
+  position: relative;
+  left: 43%;   
+}
+
+input, textarea {
+    width: 100%;
+    height: 30px;
+    box-shadow: 1px 1px 3px rgb(202, 202, 202);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea{
+    height: 60px;
+}
+
+.box{
+    width: 90%;
+    background: white;
+    color: black;
+    padding: 30px 25px;
+    position: relative;
+    left: 5%;
+    border-radius: 15px;
+    margin-right: 25px;
+    box-shadow: 1px 1px 15px rgb(202, 202, 202);
+}
+
