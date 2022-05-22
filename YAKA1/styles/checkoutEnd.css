@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.load-wrapper {
+    display: flex;
+    height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 30%;
+    height: fit-content;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    margin: 20px 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgb(202, 202, 202);
+  }
+
+  .align{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+  }
+
+  #loading{
+    width: 50px;
+    height: 50px;
+  }

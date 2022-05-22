@@ -1,0 +1,35 @@
+.main2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    min-height: 100vh;
+    padding-bottom: 30px;
+    
+    
+   
+}
+.alb {
+    text-align: center;
+    margin-bottom:30px ;
+    padding-bottom: 45px; 
+    padding-top : 50px;
+    
+    
+  
+}
+.alb h4 {
+   color: rgb(2, 112, 75);
+} 
+
+
+.alb h5{
+    text-align:center;
+    
+    padding-top: 12px;
+} 
+.container1{
+    text-align:center;
+    margin-left:50%; 
+}
