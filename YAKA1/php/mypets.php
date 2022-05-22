@@ -58,7 +58,41 @@ include("functions.php");
   <main>
     <div class="main-wrapper">
       <h1 class="page-title">My Pets</h1>
-      <div class="pet-container">
+      <table border="1" class="table">
+        <tr>
+          <th>Pet Name</th>
+          <th>Pet Type</th>
+          <th>Breed</th>
+          <th>Age</th>
+          <th>Gender</th>
+
+          <?php
+          //create the database connection
+          include_once("config.php");
+          $sql = "select * from petdetails";
+          if ($result = $conn->query($sql)) {
+            if ($result->num_rows > 0) {
+
+
+              while ($row = $result->fetch_assoc()) {
+
+                echo "<tr>";
+                echo "<td>" . $row['pet_id'] . "</td>";
+                echo "<td>" . $row['pet_name'] . "</td>";
+                echo "<td>" . $row['pet_breed'] . "</td>";
+                echo "<td>" . $row['age'] . "</td>";
+                echo "<td>" . $row['pet_gender'] . "</td>";
+                echo "</tr>";
+              }
+            }
+          } else {
+            echo "no results";
+          }
+
+          $conn->close();
+          ?>
+      </table>
+      <!-- <div class="pet-container">
         <div class="column-left">
           <div class="details-wrapper">
             <div class="img-container">
@@ -115,7 +149,7 @@ include("functions.php");
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </main>
 
@@ -123,25 +157,25 @@ include("functions.php");
   <footer>
     <div class="footer-container">
       <div id="footer-sec-1" class="footer-img-container">
-        <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
+        <a href="#"> <img src="../images/footer/footer logo.png" alt="" /> </a>
       </div>
       <div id="footer-sec-2" class="footer-links-container flex column">
         <p class="h2-small footer-title">Navigation</p>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="home.php">Home</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Schedule 2</a>
+          <a class="footer-link" href="appointment-new.php">Schedule</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Advice</a>
+          <a class="footer-link" href="pet advice.php">Advice</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Support</a>
+          <a class="footer-link" href="FAQ.php">Support</a>
         </div>
       </div>
       <div id="footer-sec-3" class="footer-links-container flex column">
@@ -149,11 +183,11 @@ include("functions.php");
 
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="shop.php">Shop</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Reviews</a>
+          <a class="footer-link" href="contact.php">Contact</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
@@ -161,7 +195,7 @@ include("functions.php");
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">Youtube</a>
         </div>
       </div>
       <div id="footer-sec-4" class="footer-app-container flex column">

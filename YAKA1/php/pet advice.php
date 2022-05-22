@@ -52,7 +52,7 @@ include("functions.php");
   <main></main>
 
   <div class="sub-header">
-    <h3>online pet health advice</h3>
+    <h3>Online pet health advice</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
 
@@ -127,9 +127,11 @@ include("functions.php");
   <div class="sub-footer">
     <h3>Can't find advise you are looking for?</h3>
     <p>We have proffetional vets for help you</p>
-    <a href="appointment-new.php"><button class="hero-btn">book an appointment</button></a>
+    <a href="appointment-new.php"><button class="btn btn-dark" style="margin-bottom:50px;">book an appointment</button></a>
   </div>
   </main>
+
+  <!-- footer -->
   <footer>
     <div class="footer-container">
       <div id="footer-sec-1" class="footer-img-container">

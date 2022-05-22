@@ -5,6 +5,14 @@ session_start();
 include("config.php");
 include("functions.php");
 
+check_login($conn);
+
+if (check_login_no_redirect($conn)) {
+  if (!($_SESSION['email'] === "admin@bawbaw.lk")) {
+    header("Location: home1.php");
+  }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -35,12 +43,8 @@ include("functions.php");
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">
-        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="home.php">Home</a></li>
         <li><a class="nav-link active-link" href="#">Admin Panel</a></li>
-        <!-- <li><a class="nav-link" href="#">Pet Advice</a></li> -->
-        <!-- <li><a class="nav-link" href="#">Shop</a></li> -->
-        <!-- <li><a class="nav-link" href="#"></a></li> -->
-        <!-- <li><a class="nav-link" href="#">About</a></li> -->
       </ul>
     </div>
     <div class="nav-buttons">
@@ -149,39 +153,39 @@ include("functions.php");
         <div class="add-item">
           <table border="1" class="table">
             <tr>
-              <td>photo</td>
-              <td>name</td>
-              <td>price</td>
-              <td>description</td>
-              <td>type</td>
-              <td>update or delete</td>
+              <th>photo</th>
+              <th>name</th>
+              <th>price</th>
+              <th>description</th>
+              <th>type</th>
+              <th>update or delete</td>
 
-              <?php
-              //create the database connection
-              include_once("config.php");
-              $sql = "select * from petstore";
-              if ($result = $conn->query($sql)) {
-                if ($result->num_rows > 0) {
+                <?php
+                //create the database connection
+                include_once("config.php");
+                $sql = "select * from petstore";
+                if ($result = $conn->query($sql)) {
+                  if ($result->num_rows > 0) {
 
 
-                  while ($row = $result->fetch_assoc()) {
+                    while ($row = $result->fetch_assoc()) {
 
-                    echo "<tr>";
-                    echo "<td>" . $row['photo'] . "</td>";
-                    echo "<td>" . $row['name'] . "</td>";
-                    echo "<td>" . $row['price'] . "</td>";
-                    echo "<td>" . $row['description'] . "</td>";
-                    echo "<td>" . $row['type'] . "</td>";
-                    echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
-                    echo "</tr>";
+                      echo "<tr>";
+                      echo "<td>" . $row['photo'] . "</td>";
+                      echo "<td>" . $row['name'] . "</td>";
+                      echo "<td>" . $row['price'] . "</td>";
+                      echo "<td>" . $row['description'] . "</td>";
+                      echo "<td>" . $row['type'] . "</td>";
+                      echo "<td><a href='updating.php? name={$row["name"]}'>update</a> | <a href='delete.php?name={$row["name"]}'>delete</a></td>";
+                      echo "</tr>";
+                    }
                   }
+                } else {
+                  echo "no results";
                 }
-              } else {
-                echo "no results";
-              }
 
-              $conn->close();
-              ?>
+                // $conn->close();
+                ?>
           </table>
 
 
@@ -243,16 +247,56 @@ include("functions.php");
       <!-- appointments -->
       <div id="tab-content-appointments" class="tab-content">
         <h3 id="tab-title">All Appointments</h3>
+        <table border="1" class="table">
+          <tr>
+            <th>Appt. ID</th>
+            <th>Pet ID</th>
+            <th>User ID</th>
+            <th>Pet Type</th>
+            <th>Pet Name</th>
+            <th>Age</th>
+            <th>Reason</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Owner Name</th>
+            <th>Contact No</th>
+
+            <?php
+            //create the database connection
+            // include_once("config.php");
+            $sql1 = "select * from appointment";
+            if ($result1 = $conn->query($sql1)) {
+              if ($result1->num_rows > 0) {
+
+
+                while ($row1 = $result1->fetch_assoc()) {
+
+                  echo "<tr>";
+                  echo "<td>" . $row1['appt_id'] . "</td>";
+                  echo "<td>" . $row1['pet_id'] . "</td>";
+                  echo "<td>" . $row1['user_id'] . "</td>";
+                  echo "<td>" . $row1['pet_type'] . "</td>";
+                  echo "<td>" . $row1['pet_name'] . "</td>";
+                  echo "<td>" . $row1['age'] . "</td>";
+                  echo "<td>" . $row1['reason'] . "</td>";
+                  echo "<td>" . $row1['date'] . "</td>";
+                  echo "<td>" . $row1['time'] . "</td>";
+                  echo "<td>" . $row1['owner_name'] . "</td>";
+                  echo "<td>" . $row1['contact_no'] . "</td>";
+                  echo "</tr>";
+                }
+              }
+            } else {
+              echo "no results";
+            }
+
+            $conn->close();
+            ?>
+        </table>
+
         <div id="all-appts-container" class="list-container">
           <div class="list-item">
             <div class="list-left-container">
-
-
-              <span class="item-name" id="item-name">
-                <a href="#">Dog Food</a>
-              </span>
-              SKU: <span class="item-sku">123456</span>
-              </p>
             </div>
             <div class="list-right-container">
               <span class="item-price">1700.00</span>

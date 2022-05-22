@@ -142,6 +142,121 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer>
+        <div class="footer-container">
+            <div id="footer-sec-1" class="footer-img-container">
+                <a href="#"> <img src="../images/footer/footer logo.png" alt="" /> </a>
+            </div>
+            <div id="footer-sec-2" class="footer-links-container flex column">
+                <p class="h2-small footer-title">Navigation</p>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="home.php">Home</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="appointment-new.php">Schedule</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="pet advice.php">Advice</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="FAQ.php">Support</a>
+                </div>
+            </div>
+            <div id="footer-sec-3" class="footer-links-container flex column">
+                <p class="h2-small footer-title">Other Links</p>
+
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="shop.php">Shop</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="contact.php">Contact</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="#">Carreers</a>
+                </div>
+                <div class="link-container">
+                    <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
+                    <a class="footer-link" href="#">Youtube</a>
+                </div>
+            </div>
+            <div id="footer-sec-4" class="footer-app-container flex column">
+                <p class="h2-small footer-title">Download the App</p>
+                <a href="#">
+                    <img class="footer-app-img" src="../images/footer/app-store-download.png" alt="" />
+                </a>
+                <a href="#">
+                    <img class="footer-app-img" src="../images/footer/play-store-download.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="footer-text">Copyright 2022 Group 09 | Flying Monkeys</div>
+    </footer>
+
+
     <script src="../js/FAQ.js"></script>
 </body>
 

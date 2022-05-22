@@ -3,7 +3,7 @@
 session_start();
 
 include 'config.php';
-// include 'functions.php';
+include 'functions.php';
 
 if (isset($_POST['register'])) {
   $first_name = $_POST['first_name'];

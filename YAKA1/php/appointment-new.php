@@ -1,5 +1,7 @@
 <?php
 
+include 'config.php';
+
 
 if (isset($_POST['schedule'])) {
   $pet_type = $_POST['pet_type'];
@@ -124,25 +126,25 @@ if (isset($_POST['schedule'])) {
   <footer>
     <div class="footer-container">
       <div id="footer-sec-1" class="footer-img-container">
-        <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
+        <a href="#"> <img src="../images/footer/footer logo.png" alt="" /> </a>
       </div>
       <div id="footer-sec-2" class="footer-links-container flex column">
         <p class="h2-small footer-title">Navigation</p>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="home.php">Home</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Schedule 2</a>
+          <a class="footer-link" href="appointment-new.php">Schedule</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Advice</a>
+          <a class="footer-link" href="pet advice.php">Advice</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Support</a>
+          <a class="footer-link" href="FAQ.php">Support</a>
         </div>
       </div>
       <div id="footer-sec-3" class="footer-links-container flex column">
@@ -150,11 +152,11 @@ if (isset($_POST['schedule'])) {
 
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="shop.php">Shop</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Reviews</a>
+          <a class="footer-link" href="contact.php">Contact</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
@@ -162,7 +164,7 @@ if (isset($_POST['schedule'])) {
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">Youtube</a>
         </div>
       </div>
       <div id="footer-sec-4" class="footer-app-container flex column">

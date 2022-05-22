@@ -2,10 +2,10 @@
 
 
 
-session_start();
+// session_start();
 
 include("config.php");
-include("functions.php");
+// include("functions.php");
 
 
 
@@ -20,7 +20,7 @@ if (isset($_POST['register'])) {
   values('$pet_name', '$pet_type', '$pet_breed', '$age', '$pet_gender')";
 
   if ($conn->query($sql)) {
-    echo "Your message sent succesefully";
+    // echo "Your message sent succesefully";
   } else {
     echo "error" . $conn->error;
   }
@@ -68,13 +68,10 @@ if (isset($_POST['register'])) {
     </div>
 
     <div class="nav-buttons">
-      <?php
-      if (check_login_no_redirect($conn)) {
-        echo '<a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>';
-      } else {
-        echo '<a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a><a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>';
-      }
-      ?>
+
+      <a href="logout.php"><button id="logout-btn" class="btn">Log Out</button></a>
+
+
     </div>
   </nav>
   <main>
@@ -136,19 +133,19 @@ if (isset($_POST['register'])) {
         <p class="h2-small footer-title">Navigation</p>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="#">Link 1</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Schedule 2</a>
+          <a class="footer-link" href="#">Link 2</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Advice</a>
+          <a class="footer-link" href="#">Link 3</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Support</a>
+          <a class="footer-link" href="#">Link 4</a>
         </div>
       </div>
       <div id="footer-sec-3" class="footer-links-container flex column">
@@ -156,19 +153,19 @@ if (isset($_POST['register'])) {
 
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="#">Link 1</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Reviews</a>
+          <a class="footer-link" href="#">Link 2</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Carreers</a>
+          <a class="footer-link" href="#">Link 3</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">Link 4</a>
         </div>
       </div>
       <div id="footer-sec-4" class="footer-app-container flex column">

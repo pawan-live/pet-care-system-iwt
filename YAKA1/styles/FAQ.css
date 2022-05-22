@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
 
 * {
   margin: 0;
@@ -8,18 +8,18 @@
 }
 
 .main-wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    max-width: 1000px;
-    min-width: 750px;
-    padding: 0 50px;
-    position: absolute;
-    left: 18%; 
-    background-color: white;
-    box-shadow: 0 0px 18px rgb(0 0 0 / 14%);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 1000px;
+  min-width: 750px;
+  padding: 0 50px;
+  position: absolute;
+  left: 18%;
+  background-color: white;
+  box-shadow: 0 0px 18px rgb(0 0 0 / 14%);
 }
 
 h1 {
@@ -39,7 +39,7 @@ h1 {
   color: #111;
   margin: 16px 0;
   border-radius: 8px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 .faq-container-header {
@@ -73,41 +73,41 @@ h1 {
   border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   html {
     font-size: 14px;
   }
 }
 
-#que{
+#que {
   width: 20%;
   height: 40%;
   position: relative;
-  left: 43%;   
+  left: 43%;
 }
 
-input, textarea {
-    width: 100%;
-    height: 30px;
-    box-shadow: 1px 1px 3px rgb(202, 202, 202);
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
+input,
+textarea {
+  width: 100%;
+  height: 30px;
+  box-shadow: 1px 1px 3px rgb(202, 202, 202);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-textarea{
-    height: 60px;
+textarea {
+  height: 60px;
 }
 
-.box{
-    width: 90%;
-    background: white;
-    color: black;
-    padding: 30px 25px;
-    position: relative;
-    left: 5%;
-    border-radius: 15px;
-    margin-right: 25px;
-    box-shadow: 1px 1px 15px rgb(202, 202, 202);
+.box {
+  width: 90%;
+  background: white;
+  color: black;
+  padding: 30px 25px;
+  position: relative;
+  left: 5%;
+  border-radius: 15px;
+  margin-right: 25px;
+  box-shadow: 1px 1px 15px rgb(202, 202, 202);
 }
-

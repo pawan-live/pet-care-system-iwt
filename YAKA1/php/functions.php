@@ -12,11 +12,11 @@ function check_login($conn)
             $user_data = mysqli_fetch_assoc($result);
             return $user_data;
         }
+    } {
+        //redirect to login page
+        header("Location: login.php");
+        die;
     }
-
-    //redirect to login page
-    header("Location: login.php");
-    die;
 }
 
 function check_login_no_redirect($conn)

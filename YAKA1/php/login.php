@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
       <!-- <input class="btn btn-light" type="submit" name="sub2" value="Sign In With Google"> -->
       <br /><br />
       <a href="">Forgot password ?</a> <br /><br />
-      <a href="../html/Register1.html">I don't have an acccount</a>
+      <a href="Register1.php">I don't have an acccount</a>
     </form>
   </div>
 </body>

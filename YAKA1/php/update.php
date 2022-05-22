@@ -121,19 +121,19 @@ include("functions.php");
         <p class="h2-small footer-title">Navigation</p>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="#">Link 1</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Schedule 2</a>
+          <a class="footer-link" href="#">Link 2</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Advice</a>
+          <a class="footer-link" href="#">Link 3</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Support</a>
+          <a class="footer-link" href="#">Link 4</a>
         </div>
       </div>
       <div id="footer-sec-3" class="footer-links-container flex column">
@@ -141,19 +141,19 @@ include("functions.php");
 
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="#">Link 1</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Reviews</a>
+          <a class="footer-link" href="#">Link 2</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Carreers</a>
+          <a class="footer-link" href="#">Link 3</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">Link 4</a>
         </div>
       </div>
       <div id="footer-sec-4" class="footer-app-container flex column">
