@@ -51,9 +51,9 @@
       <h1 class="h1-large">Login Here</h1>
       <form method="POST">
         <p>E-mail</p>
-        <input type="text" name="user-name" placeholder="Enter e-mail.." required />
+        <input type="text" name="user-name" id="username" placeholder="Enter e-mail.."  />
         <p>Password</p>
-        <input type="password" name="passsword" placeholder="Password.." required />
+        <input type="password" name="passsword" id="password" placeholder="Password.."/>
         <input class="btn btn-dark" type="submit" name="sub1" value="Log In"><br/>
         <input class="btn btn-light" type="submit" name="sub2" value="Sign In With Google"><br/><br/>
         <a href="">Forgot password ?</a> <br /><br />
