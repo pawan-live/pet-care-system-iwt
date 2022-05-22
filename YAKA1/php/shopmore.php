@@ -32,14 +32,19 @@ include("functions.php");
     <!-- navbar -->
     <nav>
       <div class="nav-logo">
-        <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+        <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
       </div>
       <div class="nav-menu-container">
         <ul class="nav-menu">
-          <li><a class="nav-link active-link" href="#">Home</a></li>
-          <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+          <li><a class="nav-link  " href="home.php">Home</a></li>
+          <?php
+          if (check_login_no_redirect($conn)) {
+            echo '<li><a class="nav-link" href="mypets.php">My Pets</a></li>';
+            echo '<li><a class="nav-link" href="appointment-new.php">Schedule</a></li>';
+          }
+          ?>
           <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
-          <li><a class="nav-link" href="shop.php">Shop</a></li>
+          <li><a class="nav-link  active-link" href="shop.php">Shop</a></li>
           <li><a class="nav-link" href="FAQ.php">Help</a></li>
           <li><a class="nav-link" href="about_us.php">About</a></li>
           <li><a class="nav-link" href="contact.php">Contact us</a></li>
@@ -77,19 +82,19 @@ include("functions.php");
             <!-- categories -->
             <div class="cat-container">
               <div class="cat">
-                <img id="img-cat-1" src="http://placehold.jp/40x40.png" alt="" />
+                <i class="fa-solid fa-bone"></i>
                 <a href='shopmore.php? type=catFood'>
                   <p id="cat-1" class="cat-title">Cat Food</p>
                 </a>
               </div>
               <div class="cat">
-                <img id="img-cat-1" src="http://placehold.jp/40x40.png" alt="" />
+                <i class="fa-solid fa-paw"></i>
                 <a href='shopmore.php? type=dogFood'>
                   <p id="cat-1" class="cat-title">Dog Food</p>
                 </a>
               </div>
               <div class="cat">
-                <img id="img-cat-1" src="http://placehold.jp/40x40.png" alt="" />
+                <i class="fa-solid fa-briefcase-medical"></i>
                 <a href='shopmore.php? type=Medical'>
                   <p id="cat-1" class="cat-title">Medical</p>
                 </a>
@@ -147,25 +152,25 @@ include("functions.php");
     <footer>
       <div class="footer-container">
         <div id="footer-sec-1" class="footer-img-container">
-          <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
+          <a href="#"> <img src="../images/footer/footer logo.png" alt="" /> </a>
         </div>
         <div id="footer-sec-2" class="footer-links-container flex column">
           <p class="h2-small footer-title">Navigation</p>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 1</a>
+            <a class="footer-link" href="home.php">Home</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 2</a>
+            <a class="footer-link" href="appointment-new.php">Schedule</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 3</a>
+            <a class="footer-link" href="pet advice.php">Advice</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 4</a>
+            <a class="footer-link" href="FAQ.php">Support</a>
           </div>
         </div>
         <div id="footer-sec-3" class="footer-links-container flex column">
@@ -173,19 +178,19 @@ include("functions.php");
 
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 1</a>
+            <a class="footer-link" href="shop.php">Shop</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 2</a>
+            <a class="footer-link" href="contact.php">Contact</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 3</a>
+            <a class="footer-link" href="#">Carreers</a>
           </div>
           <div class="link-container">
             <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-            <a class="footer-link" href="#">Link 4</a>
+            <a class="footer-link" href="#">Youtube</a>
           </div>
         </div>
         <div id="footer-sec-4" class="footer-app-container flex column">

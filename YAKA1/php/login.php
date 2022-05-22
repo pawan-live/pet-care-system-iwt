@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
       $user_data = mysqli_fetch_assoc($result);
       if ($user_data['password'] === $password) {
         $_SESSION['email'] = $user_data['email'];
-        header("Location: home1.php");
+        header("Location: home.php");
         die;
       }
       echo "Invalid login credentials";
@@ -59,12 +59,17 @@ if (isset($_POST['submit'])) {
   <!-- navbar -->
   <nav>
     <div class="nav-logo">
-      <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">
-        <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+        <li><a class="nav-link active-link" href="home.php">Home</a></li>
+        <?php
+        if (check_login_no_redirect($conn)) {
+          echo '<li><a class="nav-link" href="mypets.php">My Pets</a></li>';
+          echo '<li><a class="nav-link" href="appointment-new.php">Schedule</a></li>';
+        }
+        ?>
         <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
         <li><a class="nav-link" href="shop.php">Shop</a></li>
         <li><a class="nav-link" href="FAQ.php">Help</a></li>

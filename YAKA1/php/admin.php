@@ -9,7 +9,7 @@ check_login($conn);
 
 if (check_login_no_redirect($conn)) {
   if (!($_SESSION['email'] === "admin@bawbaw.lk")) {
-    header("Location: home1.php");
+    header("Location: home.php");
   }
 }
 
@@ -39,7 +39,7 @@ if (check_login_no_redirect($conn)) {
   <!-- navbar -->
   <nav>
     <div class="nav-logo">
-      <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">

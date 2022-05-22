@@ -31,12 +31,17 @@ include("functions.php");
   <!-- navbar -->
   <nav>
     <div class="nav-logo">
-      <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">
-        <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+        <li><a class="nav-link" href="home.php">Home</a></li>
+        <?php
+        if (check_login_no_redirect($conn)) {
+          echo '<li><a class="nav-link active-link" href="mypets.php">My Pets</a></li>';
+          echo '<li><a class="nav-link" href="appointment-new.php">Schedule</a></li>';
+        }
+        ?>
         <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
         <li><a class="nav-link" href="shop.php">Shop</a></li>
         <li><a class="nav-link" href="FAQ.php">Help</a></li>
@@ -57,9 +62,10 @@ include("functions.php");
   </nav>
   <main>
     <div class="main-wrapper">
-      <h1 class="page-title">My Pets</h1>
+      <h1 class="page-title" style="padding-bottom: 25px;">My Pets</h1>
       <table border="1" class="table">
         <tr>
+
           <th>Pet Name</th>
           <th>Pet Type</th>
           <th>Breed</th>
@@ -75,10 +81,15 @@ include("functions.php");
 
 
               while ($row = $result->fetch_assoc()) {
-
+                if ($row['pet_type'] === "cat") {
+                  $icon = '<i class="fa-solid fa-cat"></i>';
+                } else {
+                  $icon = '<i class="fa-solid fa-dog"></i>';
+                }
                 echo "<tr>";
-                echo "<td>" . $row['pet_id'] . "</td>";
+
                 echo "<td>" . $row['pet_name'] . "</td>";
+                echo "<td>" . $icon . " " . $row['pet_type'] . "</td>";
                 echo "<td>" . $row['pet_breed'] . "</td>";
                 echo "<td>" . $row['age'] . "</td>";
                 echo "<td>" . $row['pet_gender'] . "</td>";

@@ -50,12 +50,12 @@ if (isset($_POST['schedule'])) {
   <!-- navbar -->
   <nav>
     <div class="nav-logo">
-      <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">
-        <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+        <li><a class="nav-link " href="#">Home</a></li>
+        <li><a class="nav-link  active-link" href="appointment-new.php">Schedule</a></li>
         <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
         <li><a class="nav-link" href="shop.php">Shop</a></li>
         <li><a class="nav-link" href="FAQ.php">Help</a></li>

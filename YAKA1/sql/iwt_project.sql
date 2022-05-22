@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 12:38 PM
+-- Generation Time: May 22, 2022 at 07:26 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -41,6 +41,25 @@ CREATE TABLE `appointment` (
   `contact_no` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`appt_id`, `pet_id`, `user_id`, `pet_type`, `pet_name`, `age`, `reason`, `date`, `time`, `owner_name`, `contact_no`) VALUES
+(1, 0, 0, 'cat', 'sxsx', 23, 'dsdsds', '2022-05-13', '18:46:00', 'wswsw', 23232),
+(2, 0, 0, 'cat', 'sxsx', 23, 'dsdsds', '2022-05-13', '18:46:00', 'wswsw', 23232),
+(3, 0, 0, 'cat', 'sxsx', 23, 'dsdsds', '2022-05-13', '18:46:00', 'wswsw', 23232),
+(4, 0, 0, 'cat', 'sxsx', 23, 'dsdsds', '2022-05-13', '18:46:00', 'wswsw', 23232),
+(5, 0, 0, 'cat', 'balla', 12, 'ballta bade amaruva', '2022-05-06', '08:52:00', 'SHanuka', 12345123),
+(6, 0, 0, 'cat', 'hjhj', 12, 'cdcdcdcdc', '2022-05-05', '20:55:00', 'cdcdcdcd', 7755456),
+(7, 0, 0, 'cat', 'hjhj', 12, 'cdcdcdcdc', '2022-05-05', '20:55:00', 'cdcdcdcd', 7755456),
+(8, 0, 0, 'cat', 'ffdf', 12, 'fdfdf', '2022-05-06', '20:57:00', 'dffd', 778),
+(9, 0, 0, 'cat', 'ffdf', 12, 'fdfdf', '2022-05-06', '20:57:00', 'dffd', 778),
+(10, 0, 0, 'cat', 'ffdf', 12, 'fdfdf', '2022-05-06', '20:57:00', 'dffd', 778),
+(11, 0, 0, 'cat', 'cdc', 0, 'gfdg', '0000-00-00', '00:00:00', '', 0),
+(12, 0, 0, 'cat', 'gtgdg', 45, 'dgt', '0000-00-00', '00:00:00', '', 0),
+(13, 0, 0, 'cat', '', 0, '', '0000-00-00', '00:00:00', '', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -58,7 +77,10 @@ CREATE TABLE `contactusdetails` (
 --
 
 INSERT INTO `contactusdetails` (`name`, `email`, `message`) VALUES
-('tharuka', 'tharukalg@gmail.com', 'wsefgvvwsedfsdfsdsdf');
+('tharuka', 'tharukalg@gmail.com', 'wsefgvvwsedfsdfsdsdf'),
+('jijfvofv', 'vfvdfjui@gmail.com', 'vfbvifdygvidfzbujtbhdtunfgbihbuid'),
+('jijfvofv', 'vfvdfjui@gmail.com', 'vfbvifdygvidfzbujtbhdtunfgbihbuid'),
+('', '', '');
 
 -- --------------------------------------------------------
 
@@ -80,7 +102,11 @@ CREATE TABLE `petdetails` (
 --
 
 INSERT INTO `petdetails` (`pet_id`, `pet_name`, `pet_type`, `pet_breed`, `age`, `pet_gender`) VALUES
-(1, 'epi', 'cat', 'asddfasddf', 2, 'male');
+(1, 'epi', 'cat', 'asddfasddf', 2, 'male'),
+(2, 'balla', 'dog', 'dsdsd', 23, 'male'),
+(3, 'balla', 'dog', 'dsdsd', 23, 'male'),
+(4, 'gtgt', 'dog', 'gtgt', 45, 'male'),
+(5, 'gtgt', 'dog', 'gtgt', 45, 'male');
 
 -- --------------------------------------------------------
 
@@ -111,7 +137,7 @@ INSERT INTO `petstore` (`photo`, `name`, `price`, `description`, `type`) VALUES
 ('../images/shop/12.jpg.png', 'Friskies', '$22.99', 'perfect for cats', 'catFood'),
 ('../images/shop/30.jpg', 'Holistic', '$33.99', 'Good for the dogs health ', 'dogFood'),
 ('../images/shop/33.jpg', 'Holistic select', '$32.88', 'tottaly body health design with diagestive health', 'dogFood'),
-('../images/shop/26.jpg', 'iamso', '$33.99', 'weight gainin food for cat', ''),
+('../images/shop/26.jpg', 'iamso', '$33.99', 'Test 1234', ''),
 ('../images/shop/36.jpg', 'islam', '$55.77', 'number 1 ingrediant is real chicken', 'dogFood'),
 ('../images/shop/22.jpg', 'kit&kaboodle', '$33.99', '4 tasty flavourse\r\nchicken\r\nliver\r\nturkey', ''),
 ('../images/shop/7.jpg.png', 'Nutramax Denamarin', '$90.99', 'Nutramax Denamarin Liver Supplement for Dogs of All Sizes, 225 mg, Chewable Tablets', 'Medical'),
@@ -141,7 +167,7 @@ INSERT INTO `petstore` (`photo`, `name`, `price`, `description`, `type`) VALUES
 --
 
 CREATE TABLE `user` (
-  `user_id` varchar(400) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `first_name` varchar(400) NOT NULL,
   `last_name` varchar(400) NOT NULL,
   `email` varchar(400) NOT NULL,
@@ -155,11 +181,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `password`, `gender`, `contact_no`) VALUES
-('', 'tharuka', 'lakshan', 'tharuka@gmail.com', 'tharuka', 'male', 3322222),
-('', 'tharuka', 'lakshan', 'tharuka@gmail.com', 'tharuka', 'male', 3322222),
-('', 'tharuka', 'lakshan', 'tharuka@gmail.com', 'tharuka', 'male', 3322222),
-('', 'tharuka', 'lakshan', 'tharuka@gmail.com', '3322', 'male', 1232113),
-('', 'lakshan', 'gamage', 'tharuka@gmail.com', '7777', 'male', 34234345);
+(1, 'tharuka', 'lakshan', 'tharuka@gmail.com', 'tharuka', 'male', 3322222),
+(5, 'lakshan', 'gamage', 'tharuka@gmail.com', '7777', 'male', 34234345),
+(6, 'fff', 'ddd', 'ddf@gmail.com', 'abcd', 'male', 775588669),
+(7, 'admin', 'nande', 'admin@bawbaw.lk', 'bawbaw', 'male', 778854545),
+(8, 'balla', 'uura', 'balla@balla.com', 'abc', 'male', 11245612),
+(9, 'pawan', 'senpura', 'pawan.sen@gmail.com', '123456', 'male', 778856223);
 
 --
 -- Indexes for dumped tables
@@ -184,6 +211,12 @@ ALTER TABLE `petstore`
   ADD PRIMARY KEY (`name`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -191,13 +224,19 @@ ALTER TABLE `petstore`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appt_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `appt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `petdetails`
 --
 ALTER TABLE `petdetails`
-  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

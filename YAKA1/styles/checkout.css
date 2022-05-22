@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* main{
@@ -10,94 +10,92 @@
 } */
 
 .main-wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: row;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
 }
-
-
 
 .h1-large1 {
-    color: var(--black);
-    font-weight: 700;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    /* border: 1px solid black; */
-  }
-
-.col-left{
-    width: 50%;
-    background: white;
-    color: black;
-    padding: 30px 25px;
-    border-radius: 15px;
-    margin-right: 25px;
-    box-shadow: 1px 1px 15px rgb(202, 202, 202);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  /* border: 1px solid black; */
 }
 
-.col-right{
-    width: 50%;
-    background: white;
-    color: black;
-    padding: 30px 25px; 
-    border-radius: 15px;
-    box-shadow: 1px 1px 15px rgb(202, 202, 202);
+.col-left {
+  width: 50%;
+  background: white;
+  color: black;
+  padding: 30px 25px;
+  border-radius: 15px;
+  margin-right: 25px;
+  box-shadow: 1px 1px 15px rgb(202, 202, 202);
 }
 
-.input-field{
-    width: 100%; 
-    /* border: 1px solid red; */
+.col-right {
+  width: 50%;
+  background: white;
+  color: black;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgb(202, 202, 202);
 }
 
-.check{
-    display: flex;
+.input-field {
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
-#check-lbl{
-    margin-left: 10px;
+.check {
+  display: flex;
 }
 
-.input-pay{
-    margin: 10px 40px;
-    /* border: 1px solid blue; */
+#check-lbl {
+  margin-left: 10px;
 }
 
-.input-field-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* border: 1px solid green; */
+.input-pay {
+  margin: 10px 40px;
+  /* border: 1px solid blue; */
 }
 
-.pay-mtd{
-    display: flex;
-    flex-direction: row;
+.input-field-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid green; */
 }
 
-.col-right button{
-    width: 100%;
-    margin: 10px 0px;
+.pay-mtd {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-right button {
+  width: 100%;
+  margin: 10px 0px;
 }
 
 input {
-    width: 95%;
-    height: 25px;
-    box-shadow: 1px 1px 3px rgb(202, 202, 202);
-    border: none;
+  width: 95%;
+  height: 25px;
+  box-shadow: 1px 1px 3px rgb(202, 202, 202);
+  border: none;
 }
 
-#checkbox{
-    width: 20px;
-    margin-top: 0px;
-    border: none;
-    box-shadow: 0px 0px 0px rgb(202, 202, 202);
+#checkbox {
+  width: 20px;
+  margin-top: 0px;
+  border: none;
+  box-shadow: 0px 0px 0px rgb(202, 202, 202);
 }
 
-#marg{
-    box-shadow: 0px 0px 0px rgb(202, 202, 202);
+#marg {
+  box-shadow: 0px 0px 0px rgb(202, 202, 202);
 }
 
-.pay-mtd i{
-    font-size: 50px;
+.pay-mtd i {
+  font-size: 50px;
 }

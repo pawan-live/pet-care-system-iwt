@@ -30,14 +30,19 @@ include("functions.php");
   <!-- navbar -->
   <nav>
     <div class="nav-logo">
-      <a href="#"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
+      <a href="home.php"><img src="../images/navbar/petcare_logo.png" alt="" /></a>
     </div>
     <div class="nav-menu-container">
       <ul class="nav-menu">
-        <li><a class="nav-link active-link" href="#">Home</a></li>
-        <li><a class="nav-link" href="appointment-new.php">Schedule</a></li>
+        <li><a class="nav-link" href="home.php">Home</a></li>
+        <?php
+        if (check_login_no_redirect($conn)) {
+          echo '<li><a class="nav-link" href="mypets.php">My Pets</a></li>';
+          echo '<li><a class="nav-link" href="appointment-new.php">Schedule</a></li>';
+        }
+        ?>
         <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
-        <li><a class="nav-link" href="shop.php">Shop</a></li>
+        <li><a class="nav-link  active-link" href="shop.php">Shop</a></li>
         <li><a class="nav-link" href="FAQ.php">Help</a></li>
         <li><a class="nav-link" href="about_us.php">About</a></li>
         <li><a class="nav-link" href="contact.php">Contact us</a></li>
@@ -282,25 +287,25 @@ include("functions.php");
   <footer>
     <div class="footer-container">
       <div id="footer-sec-1" class="footer-img-container">
-        <a href="#"> <img src="http://placehold.jp/300x160.png" alt="" /> </a>
+        <a href="#"> <img src="../images/footer/footer logo.png" alt="" /> </a>
       </div>
       <div id="footer-sec-2" class="footer-links-container flex column">
         <p class="h2-small footer-title">Navigation</p>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="home.php">Home</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Schedule 2</a>
+          <a class="footer-link" href="appointment-new.php">Schedule</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Advice</a>
+          <a class="footer-link" href="pet advice.php">Advice</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Support</a>
+          <a class="footer-link" href="FAQ.php">Support</a>
         </div>
       </div>
       <div id="footer-sec-3" class="footer-links-container flex column">
@@ -308,11 +313,11 @@ include("functions.php");
 
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="shop.php">Shop</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Reviews</a>
+          <a class="footer-link" href="contact.php">Contact</a>
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
@@ -320,7 +325,7 @@ include("functions.php");
         </div>
         <div class="link-container">
           <i class="footer-nav-icon fa-solid fa-arrow-right"></i>
-          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">Youtube</a>
         </div>
       </div>
       <div id="footer-sec-4" class="footer-app-container flex column">
