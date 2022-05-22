@@ -1,13 +1,3 @@
-<?php
-// include 'connect.php';
-// if (isset($_POST['submit'])) {
-//   $item_name = $_POST['item_name'];
-//   $item_sku = $_POST['item_sku'];
-//   $item_price = $_POST['item_price'];
-//   $item_stock = $_POST['item_stock'];
-// }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

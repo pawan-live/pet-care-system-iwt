@@ -28,15 +28,15 @@
       <ul class="nav-menu">
         <li><a class="nav-link active-link" href="#">Home</a></li>
         <li><a class="nav-link" href="#">Schedule</a></li>
-        <li><a class="nav-link" href="#">Pet Advice</a></li>
+        <li><a class="nav-link" href="pet advice.php">Pet Advice</a></li>
         <li><a class="nav-link" href="#">Shop</a></li>
         <li><a class="nav-link" href="#">Help</a></li>
         <li><a class="nav-link" href="#">About</a></li>
       </ul>
     </div>
     <div class="nav-buttons">
-      <button id="login-btn" class="btn btn-light">Login</button>
-      <button id="reg-btn" class="btn btn-dark">Join Now</button>
+      <a href="login.php"><button id="login-btn" class="btn btn-light">Login</button></a>
+      <a href="Register1.php"><button id="reg-btn" class="btn btn-dark">Join Now</button></a>
     </div>
   </nav>
 
