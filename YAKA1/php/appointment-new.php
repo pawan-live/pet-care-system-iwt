@@ -14,15 +14,15 @@ if (isset($_POST['schedule'])) {
   $sql = "insert into appointment (pet_type, pet_name, age, reason, date, time, owner_name, contact_no)
   values('$pet_type', '$pet_name', '$age', '$reason', '$date', '$time', '$username', '$contact')";
 
-  $result = mysqli_query($con, $sql);
+  $result = mysqli_query($conn, $sql);
 
   if ($result) {
     // echo "Data inserted successfully";
   } else {
-    die(mysqli_error($con));
+    die(mysqli_error($conn));
   }
 
-  $result = mysqli_query($con, $sql);
+  $result = mysqli_query($conn, $sql);
 }
 
 ?>

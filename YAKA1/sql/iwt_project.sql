@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 09:38 AM
+-- Generation Time: May 22, 2022 at 12:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `iwt project`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appt_id` int(11) NOT NULL,
+  `pet_id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `pet_type` tinytext NOT NULL,
+  `pet_name` tinytext NOT NULL,
+  `age` int(2) NOT NULL,
+  `reason` text NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `owner_name` tinytext NOT NULL,
+  `contact_no` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -146,6 +166,12 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `password`, `
 --
 
 --
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`appt_id`);
+
+--
 -- Indexes for table `petdetails`
 --
 ALTER TABLE `petdetails`
@@ -160,6 +186,12 @@ ALTER TABLE `petstore`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `appt_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `petdetails`
