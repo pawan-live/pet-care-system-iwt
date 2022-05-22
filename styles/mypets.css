@@ -99,11 +99,10 @@ p {
 }
 
 .appt-group > i {
-  margin-left: 12px; 
+  margin-left: 12px;
   cursor: pointer;
 }
 
-  .appt-group > i:hover {
-    color: rgb(239, 199, 0);
-  }
+.appt-group > i:hover {
+  color: rgb(239, 199, 0);
 }
